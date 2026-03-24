@@ -1,6 +1,59 @@
 {
-  "generated_at": "2026-03-24T23:56:00.642100",
+  "generated_at": "2026-03-25T00:05:42.263264",
   "items": [
+    {
+      "title": "Powering product discovery in ChatGPT",
+      "summary": "ChatGPT introduces richer, visually immersive shopping powered by the Agentic Commerce Protocol, enabling product discovery, side-by-side comparisons, and merchant integration.",
+      "importance": 10,
+      "category": "🔥 行业动态",
+      "sources": [
+        {
+          "name": "OpenAI 官方博客",
+          "url": "https://openai.com/news",
+          "item_url": "https://openai.com/index/powering-product-discovery-in-chatgpt"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "智能体"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
+      "summary": "Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.\nThe post Building AI-powered GitHub issue triage with the Copilot SDK appeared first on The GitHub Blog.",
+      "importance": 10,
+      "category": "🛠️ 工具资源",
+      "sources": [
+        {
+          "name": "GitHub 博客",
+          "url": "https://github.blog/",
+          "item_url": "https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/"
+        }
+      ],
+      "tags": [
+        "Microsoft",
+        "开源"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "Update on the OpenAI Foundation",
+      "summary": "The OpenAI Foundation announces plans to invest at least $1 billion in curing diseases, economic opportunity, AI resilience, and community programs.",
+      "importance": 9,
+      "category": "🔥 行业动态",
+      "sources": [
+        {
+          "name": "OpenAI 官方博客",
+          "url": "https://openai.com/news",
+          "item_url": "https://openai.com/index/update-on-the-openai-foundation"
+        }
+      ],
+      "tags": [
+        "OpenAI"
+      ],
+      "related_urls": []
+    },
     {
       "title": "Vibe-coding startup Lovable is on the hunt for acquisitions",
       "summary": "Lovable's founder said the fast-growing vibe-coding startup is looking for startups and teams to join its company.",
@@ -98,62 +151,15 @@
       "related_urls": []
     },
     {
-      "title": "Mirage raises $75M to continue building models for its AI video editing app Captions",
-      "summary": "Mirage, the maker of video editing app Captions, has raised $75 million in growth financing from General Catalyst's Customer Value Fund (CVF).",
+      "title": "Meet the former Apple designer building a new AI interface at Hark",
+      "summary": "The company said it would design models, hardware, and interfaces in tandem to deliver a \"seamless end-to-end personal intelligence product.\"",
       "importance": 7,
       "category": "📰 新闻资讯",
       "sources": [
         {
           "name": "TechCrunch - AI",
           "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/mirage-raises-75m-to-continue-building-models-for-its-ai-video-editing-app-captions/"
-        }
-      ],
-      "tags": [],
-      "related_urls": []
-    },
-    {
-      "title": "Agile Robots becomes the latest robotics company to partner with Google DeepMind",
-      "summary": "Agile Robots will incorporate Google DeepMind's robotics foundation models into its bots while collecting data for the AI research lab.",
-      "importance": 7,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/agile-robots-becomes-the-latest-robotics-company-to-partner-with-google-deepmind/"
-        }
-      ],
-      "tags": [
-        "Google"
-      ],
-      "related_urls": []
-    },
-    {
-      "title": "Creating with Sora Safely",
-      "summary": "To address the novel safety challenges posed by a state-of-the-art video model as well as a new social creation platform, we’ve built Sora 2 and the Sora app with safety at the foundation. Our approach is anchored in concrete protections.",
-      "importance": 6,
-      "category": "🔥 行业动态",
-      "sources": [
-        {
-          "name": "OpenAI 官方博客",
-          "url": "https://openai.com/news",
-          "item_url": "https://openai.com/index/creating-with-sora-safely"
-        }
-      ],
-      "tags": [],
-      "related_urls": []
-    },
-    {
-      "title": "The hardest question to answer about AI-fueled delusions",
-      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here.",
-      "importance": 6,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "MIT Technology Review - AI",
-          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
-          "item_url": "https://www.technologyreview.com/2026/03/23/1134527/the-hardest-question-to-answer-about-ai-fueled-delusions/"
+          "item_url": "https://techcrunch.com/2026/03/24/meet-the-former-apple-designer-building-a-new-ai-interface-at-hark/"
         }
       ],
       "tags": [],

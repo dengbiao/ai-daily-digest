@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 AI Daily Digest - 中文内容生成器
-针对AI行业大事件优化
+完整中文输出 - 基于模板重写
 """
 
 import json
@@ -12,14 +12,7 @@ from pathlib import Path
 
 
 class ChineseContentGenerator:
-    """中文内容生成器 - 专注AI大事件"""
-    
-    # 分类中文映射
-    CATEGORY_MAP = {
-        '🔥 行业动态': '行业动态',
-        '📰 新闻资讯': '新闻资讯',
-        '🛠️ 工具资源': '工具资源',
-    }
+    """中文内容生成器 - 生成完整中文内容"""
     
     # 事件类型映射
     EVENT_TYPE_MAP = {
@@ -31,59 +24,20 @@ class ChineseContentGenerator:
         '行业新闻': '📰 行业新闻',
     }
     
-    # 公司/产品名称映射
-    COMPANY_MAP = {
-        'openai': 'OpenAI',
-        'anthropic': 'Anthropic',
-        'google': 'Google',
-        'deepmind': 'DeepMind',
-        'microsoft': '微软',
-        'meta': 'Meta',
-        'facebook': 'Meta',
-        'nvidia': 'NVIDIA',
-        'stability': 'Stability AI',
-        'huggingface': 'Hugging Face',
-        'github': 'GitHub',
-        'amazon': '亚马逊',
-        'apple': '苹果',
-        'xai': 'xAI',
-        'grok': 'Grok',
-    }
-    
-    # 产品名称映射
-    PRODUCT_MAP = {
-        'chatgpt': 'ChatGPT',
-        'gpt-4': 'GPT-4',
-        'gpt-5': 'GPT-5',
-        'gpt-4o': 'GPT-4o',
-        'o1': 'o1',
-        'o3': 'o3',
-        'claude': 'Claude',
-        'gemini': 'Gemini',
-        'bard': 'Bard',
-        'copilot': 'Copilot',
-        'llama': 'Llama',
-        'stable diffusion': 'Stable Diffusion',
-        'midjourney': 'Midjourney',
-        'dall-e': 'DALL-E',
-        'whisper': 'Whisper',
-        'embedding': 'Embedding',
-    }
-    
     def translate_and_summarize(self, title: str, summary: str, event_type: str = '行业新闻') -> tuple:
-        """生成精炼的中文标题和摘要"""
+        """生成完整的中文标题和摘要"""
+        # 清理文本
         title = self._clean_text(title)
         summary = self._clean_text(summary)
         
-        # 提取公司和产品信息
-        companies = self._extract_companies(title + ' ' + summary)
-        products = self._extract_products(title + ' ' + summary)
+        # 提取关键信息
+        info = self._extract_info(title, summary)
         
         # 生成中文标题
-        cn_title = self._generate_title(title, companies, products, event_type)
+        cn_title = self._generate_chinese_title(info, event_type)
         
         # 生成中文摘要
-        cn_summary = self._generate_summary(summary, companies, products, event_type)
+        cn_summary = self._generate_chinese_summary(info, event_type)
         
         return cn_title, cn_summary
     
@@ -93,143 +47,199 @@ class ChineseContentGenerator:
         text = ' '.join(text.split())
         return text.strip()
     
-    def _extract_companies(self, text: str) -> list:
-        """提取公司名称"""
+    def _extract_info(self, title: str, summary: str) -> dict:
+        """提取关键信息"""
+        text = title + ' ' + summary
         text_lower = text.lower()
-        companies = []
-        for key, name in self.COMPANY_MAP.items():
-            if key in text_lower:
-                companies.append(name)
-        return list(dict.fromkeys(companies))  # 去重
-    
-    def _extract_products(self, text: str) -> list:
-        """提取产品名称"""
-        text_lower = text.lower()
-        products = []
-        for key, name in self.PRODUCT_MAP.items():
-            if key in text_lower:
-                products.append(name)
-        return list(dict.fromkeys(products))
-    
-    def _generate_title(self, title: str, companies: list, products: list, event_type: str) -> str:
-        """生成中文标题"""
-        # 移除常见的英文前缀
-        title = re.sub(r'^(Introducing|Announcing|Launching|Meet)\s+', '', title, flags=re.IGNORECASE)
         
-        # 提取核心内容
-        if ':' in title:
-            parts = title.split(':', 1)
-            if len(parts[0]) < 30:
-                title = parts[1].strip()
-        
-        # 翻译常见动词和名词
-        translations = {
-            r'\blaunch\b': '发布',
-            r'\brelease\b': '发布',
-            r'\bannounce\b': '宣布',
-            r'\bintroduce\b': '推出',
-            r'\bunveil\b': ' unveiled',
-            r'\bupdate\b': '更新',
-            r'\bupgrade\b': '升级',
-            r'\bnew\b': '新',
-            r'\bnow available\b': '现已上线',
-            r'\bcoming soon\b': '即将推出',
+        info = {
+            'companies': [],
+            'products': [],
+            'amount': '',
+            'action': '',
+            'topic': '',
         }
         
-        cn_title = title
-        for pattern, replacement in translations.items():
-            cn_title = re.sub(pattern, replacement, cn_title, flags=re.IGNORECASE)
+        # 提取公司名
+        companies = {
+            'openai': 'OpenAI',
+            'anthropic': 'Anthropic',
+            'google': 'Google',
+            'deepmind': 'DeepMind',
+            'microsoft': '微软',
+            'meta': 'Meta',
+            'facebook': 'Meta',
+            'nvidia': 'NVIDIA',
+            'stability': 'Stability AI',
+            'huggingface': 'Hugging Face',
+            'github': 'GitHub',
+            'amazon': '亚马逊',
+            'apple': '苹果',
+            'xai': 'xAI',
+            'lovable': 'Lovable',
+            'techcrunch': 'TechCrunch',
+            'mit': 'MIT',
+            'mirage': 'Mirage',
+            'agile robots': 'Agile Robots',
+            'air street': 'Air Street Capital',
+            'hark': 'Hark',
+        }
         
-        # 如果公司有产品，构建"公司+产品+动作"格式
-        if companies and products:
-            company = companies[0]
-            product = products[0]
-            # 尝试提取动作
-            action = self._extract_action(cn_title)
-            if action:
-                cn_title = f"{company}{product}{action}"
-            else:
-                cn_title = f"{company}发布{product}新功能"
-        elif companies:
-            company = companies[0]
-            cn_title = f"{company}：{cn_title}"
+        for key, name in companies.items():
+            if key in text_lower:
+                info['companies'].append(name)
         
-        # 限制长度
-        if len(cn_title) > 60:
-            cn_title = cn_title[:57] + '...'
+        # 提取产品名
+        products = {
+            'chatgpt': 'ChatGPT',
+            'gpt-4': 'GPT-4',
+            'gpt-5': 'GPT-5',
+            'gpt-4o': 'GPT-4o',
+            'o1': 'o1',
+            'o3': 'o3',
+            'claude': 'Claude',
+            'gemini': 'Gemini',
+            'bard': 'Bard',
+            'copilot': 'Copilot',
+            'llama': 'Llama',
+            'stable diffusion': 'Stable Diffusion',
+            'midjourney': 'Midjourney',
+            'dall-e': 'DALL-E',
+            'whisper': 'Whisper',
+            'sora': 'Sora',
+            'captions': 'Captions',
+            'codeql': 'CodeQL',
+            'eva': 'EVA',
+        }
         
-        return cn_title.strip()
+        for key, name in products.items():
+            if key in text_lower:
+                info['products'].append(name)
+        
+        # 提取金额
+        amount_match = re.search(r'\$([\d,]+)\s*(M|million|B|billion)', text, re.IGNORECASE)
+        if amount_match:
+            amount = amount_match.group(1).replace(',', '')
+            unit = amount_match.group(2).lower()
+            if unit in ['m', 'million']:
+                info['amount'] = f"{amount}百万美元"
+            elif unit in ['b', 'billion']:
+                info['amount'] = f"{amount}亿美元"
+        
+        # 提取主题/关键词
+        topics = {
+            'product discovery': '产品发现',
+            'shopping': '购物',
+            'commerce': '电商',
+            'video': '视频',
+            'image': '图像',
+            'code': '代码',
+            'security': '安全',
+            'voice': '语音',
+            'agent': '智能体',
+            'acquisition': '收购',
+            'funding': '融资',
+            'foundation': '基金会',
+            'triage': '分类处理',
+            'detection': '检测',
+        }
+        
+        for key, name in topics.items():
+            if key in text_lower:
+                info['topic'] = name
+                break
+        
+        return info
     
-    def _extract_action(self, text: str) -> str:
-        """提取动作词"""
-        actions = ['发布', '推出', '上线', '更新', '升级', '宣布', '开源']
-        for action in actions:
-            if action in text:
-                return action
-        return ''
-    
-    def _generate_summary(self, summary: str, companies: list, products: list, event_type: str) -> str:
-        """生成中文摘要"""
-        # 提取第一句
-        sentences = re.split(r'(?<=[.!?。！？])\s+', summary)
-        core = sentences[0] if sentences else summary
+    def _generate_chinese_title(self, info: dict, event_type: str) -> str:
+        """生成中文标题"""
+        company = info['companies'][0] if info['companies'] else ''
+        product = info['products'][0] if info['products'] else ''
+        topic = info['topic']
         
-        # 限制长度
-        if len(core) > 200:
-            core = core[:197] + '...'
-        
-        # 根据事件类型生成摘要模板
+        # 根据事件类型生成标题
         if event_type == '产品发布':
-            if companies and products:
-                return f"{companies[0]}正式发布了{products[0]}，{self._extract_key_point(core)}"
-            elif companies:
-                return f"{companies[0]}发布了新产品，{self._extract_key_point(core)}"
+            if company and product:
+                return f"{company}发布{product}新功能"
+            elif company and topic:
+                return f"{company}推出{topic}功能"
+            elif company:
+                return f"{company}发布新产品"
         
         elif event_type == '重大更新':
-            if companies and products:
-                return f"{companies[0]}对{products[0]}进行了重大更新，{self._extract_key_point(core)}"
-            elif companies:
-                return f"{companies[0]}推出重要更新，{self._extract_key_point(core)}"
+            if company and product:
+                return f"{company}更新{product}"
+            elif company:
+                return f"{company}重大更新"
         
         elif event_type == '公司动态':
-            if companies:
-                return f"{companies[0]}传来新动态，{self._extract_key_point(core)}"
+            if info['amount']:
+                if company:
+                    return f"{company}获得{info['amount']}融资"
+                return f"AI公司获得{info['amount']}融资"
+            elif 'acquisition' in str(info).lower():
+                if company:
+                    return f"{company}寻求收购机会"
+                return "AI公司寻求收购"
+            elif company:
+                return f"{company}最新动态"
         
         elif event_type == '开源发布':
-            if companies:
-                return f"{companies[0]}开源了新项目，{self._extract_key_point(core)}"
-            else:
-                return f"新的开源项目发布，{self._extract_key_point(core)}"
+            if company:
+                return f"{company}开源新项目"
+            return "新开源项目发布"
+        
+        # 默认标题
+        if company and topic:
+            return f"{company}{topic}新进展"
+        elif company:
+            return f"{company}最新消息"
+        elif topic:
+            return f"AI{topic}新动态"
+        
+        return "AI行业最新动态"
+    
+    def _generate_chinese_summary(self, info: dict, event_type: str) -> str:
+        """生成中文摘要"""
+        company = info['companies'][0] if info['companies'] else '该公司'
+        product = info['products'][0] if info['products'] else ''
+        topic = info['topic']
+        amount = info['amount']
+        
+        # 根据事件类型生成摘要
+        if event_type == '产品发布':
+            if product and topic:
+                return f"{company}正式推出{product}的{topic}功能，进一步提升用户体验。"
+            elif product:
+                return f"{company}发布了{product}的重要更新，带来多项新功能。"
+            elif topic:
+                return f"{company}推出全新的{topic}功能，值得关注。"
+            return f"{company}发布新产品，详情请点击查看。"
+        
+        elif event_type == '重大更新':
+            if product:
+                return f"{company}对{product}进行了重大升级，优化了核心功能。"
+            return f"{company}推出重要更新，详情请查看原文。"
+        
+        elif event_type == '公司动态':
+            if amount:
+                return f"{company}宣布完成{amount}融资，将用于技术研发和市场拓展。"
+            return f"{company}公布最新发展动态，详情请查看原文链接。"
+        
+        elif event_type == '开源发布':
+            return f"{company}开源了新项目，为开发者社区贡献新工具。"
+        
+        elif event_type == '合作投资':
+            return f"{company}宣布重要合作，详情请点击查看。"
         
         # 默认摘要
-        if companies:
-            return f"{companies[0]}最新消息：{self._extract_key_point(core)}"
-        
-        return self._extract_key_point(core)
-    
-    def _extract_key_point(self, text: str) -> str:
-        """提取核心要点"""
-        # 简化处理，返回精炼版本
-        text = re.sub(r'^\s*([Tt]he|[Aa]|[Aa]n)\s+', '', text)
-        text = re.sub(r'\s+', ' ', text)
-        
-        # 限制长度
-        if len(text) > 120:
-            text = text[:117] + '...'
-        
-        return text.strip()
-    
-    def get_category_label(self, category: str) -> str:
-        """获取分类中文标签"""
-        return self.CATEGORY_MAP.get(category, category)
+        if topic:
+            return f"{company}在{topic}领域有新进展，值得关注。"
+        return f"{company}最新消息，详情请查看原文。"
     
     def get_event_type_label(self, event_type: str) -> str:
         """获取事件类型标签"""
         return self.EVENT_TYPE_MAP.get(event_type, event_type)
-    
-    def get_tag_label(self, tag: str) -> str:
-        """获取标签中文标签"""
-        return tag  # 保持原样
 
 
 if __name__ == '__main__':
@@ -237,13 +247,13 @@ if __name__ == '__main__':
     
     test_cases = [
         {
-            'title': 'OpenAI launches GPT-4 Turbo with vision capabilities',
-            'summary': 'OpenAI announced the launch of GPT-4 Turbo, a new version of their flagship model that includes vision capabilities and improved performance.',
+            'title': 'Powering product discovery in ChatGPT',
+            'summary': 'ChatGPT introduces richer, visually immersive shopping powered by Agentic Commerce Protocol.',
             'event_type': '产品发布'
         },
         {
-            'title': 'Anthropic raises $750M in new funding round',
-            'summary': 'Anthropic has secured $750 million in additional funding, bringing the company\'s valuation to $18.4 billion.',
+            'title': 'Mirage raises $75M to continue building models',
+            'summary': 'Mirage has raised $75 million in growth financing.',
             'event_type': '公司动态'
         }
     ]

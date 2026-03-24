@@ -1,17 +1,30 @@
 {
-  "fetched_at": "2026-03-24T23:56:00.632714",
+  "fetched_at": "2026-03-25T00:05:42.255837",
   "items": [
     {
-      "title": "Creating with Sora Safely",
-      "url": "https://openai.com/index/creating-with-sora-safely",
+      "title": "Powering product discovery in ChatGPT",
+      "url": "https://openai.com/index/powering-product-discovery-in-chatgpt",
       "source": "OpenAI 官方博客",
       "source_url": "https://openai.com/news",
-      "published": "2026-03-23T00:00:00",
-      "summary": "To address the novel safety challenges posed by a state-of-the-art video model as well as a new social creation platform, we’ve built Sora 2 and the Sora app with safety at the foundation. Our approach is anchored in concrete protections.",
-      "content": "To address the novel safety challenges posed by a state-of-the-art video model as well as a new social creation platform, we’ve built Sora 2 and the Sora app with safety at the foundation. Our approach is anchored in concrete protections.",
+      "published": "2026-03-24T09:00:00",
+      "summary": "ChatGPT introduces richer, visually immersive shopping powered by the Agentic Commerce Protocol, enabling product discovery, side-by-side comparisons, and merchant integration.",
+      "content": "ChatGPT introduces richer, visually immersive shopping powered by the Agentic Commerce Protocol, enabling product discovery, side-by-side comparisons, and merchant integration.",
       "category": "行业动态",
       "tags": [],
-      "hash_id": "96d73b6b190a",
+      "hash_id": "753168a84647",
+      "related_sources": null
+    },
+    {
+      "title": "Update on the OpenAI Foundation",
+      "url": "https://openai.com/index/update-on-the-openai-foundation",
+      "source": "OpenAI 官方博客",
+      "source_url": "https://openai.com/news",
+      "published": "2026-03-24T09:00:00",
+      "summary": "The OpenAI Foundation announces plans to invest at least $1 billion in curing diseases, economic opportunity, AI resilience, and community programs.",
+      "content": "The OpenAI Foundation announces plans to invest at least $1 billion in curing diseases, economic opportunity, AI resilience, and community programs.",
+      "category": "行业动态",
+      "tags": [],
+      "hash_id": "83bbe5442159",
       "related_sources": null
     },
     {
@@ -51,6 +64,19 @@
       "category": "新闻资讯",
       "tags": [],
       "hash_id": "b960a71b0208",
+      "related_sources": null
+    },
+    {
+      "title": "Meet the former Apple designer building a new AI interface at Hark",
+      "url": "https://techcrunch.com/2026/03/24/meet-the-former-apple-designer-building-a-new-ai-interface-at-hark/",
+      "source": "TechCrunch - AI",
+      "source_url": "https://techcrunch.com/category/artificial-intelligence/",
+      "published": "2026-03-24T16:00:00",
+      "summary": "The company said it would design models, hardware, and interfaces in tandem to deliver a \"seamless end-to-end personal intelligence product.\"",
+      "content": "The company said it would design models, hardware, and interfaces in tandem to deliver a \"seamless end-to-end personal intelligence product.\"",
+      "category": "新闻资讯",
+      "tags": [],
+      "hash_id": "fdeb29f3641a",
       "related_sources": null
     },
     {
@@ -171,16 +197,16 @@
       "related_sources": null
     },
     {
-      "title": "Sam Altman-backed fusion startup Helion in talks to sell power to OpenAI",
-      "url": "https://techcrunch.com/2026/03/23/sam-altman-openai-fusion-energy-board-helion/",
-      "source": "TechCrunch - AI",
-      "source_url": "https://techcrunch.com/category/artificial-intelligence/",
-      "published": "2026-03-23T15:03:36",
-      "summary": "OpenAI CEO Sam Altman is stepping down as board chair of Helion. His departure comes as reports that the two companies are negotiating a deal that would see Helion sell 12.5% of its power output to OpenAI.",
-      "content": "OpenAI CEO Sam Altman is stepping down as board chair of Helion. His departure comes as reports that the two companies are negotiating a deal that would see Helion sell 12.5% of its power output to OpenAI.",
-      "category": "新闻资讯",
+      "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
+      "url": "https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/",
+      "source": "GitHub 博客",
+      "source_url": "https://github.blog/",
+      "published": "2026-03-24T16:00:00",
+      "summary": "<p>Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/\">Building AI-powered GitHub issue triage with the Copilot SDK</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+      "content": "<p>Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/\">Building AI-powered GitHub issue triage with the Copilot SDK</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+      "category": "工具资源",
       "tags": [],
-      "hash_id": "44b0591a7e51",
+      "hash_id": "e91b49129fa5",
       "related_sources": null
     },
     {
