@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<!-- Post Header -->
+<article class="max-w-4xl mx-auto">
+  <header class="mb-8 pb-8 border-b border-dark-border">
+    <div class="flex items-center gap-3 mb-4">
+      <a href="{{ '/' | relative_url }}" class="text-gray-500 hover:text-blue-400 transition flex items-center gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        返回首页
+      </a>
+    </div>
+    
+    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-gray-100">{{ page.title }}</h1>
+    
+    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+      <span class="flex items-center gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        {{ page.date | date: "%Y年%m月%d日" }}
+      </span>
+      {% if page.news_count %}
+      <span class="flex items-center gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        {{ page.news_count }} 条资讯
+      </span>
+      {% endif %}
+    </div>
+  </header>
+  
+  <!-- News Items -->
+  <div class="space-y-8">
+    {{ content }}
+  </div>
+  
+  <!-- Post Navigation -->
+  <nav class="mt-12 pt-8 border-t border-dark-border">
+    <div class="flex justify-between">
+      {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" class="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        <div class="text-left">
+          <div class="text-xs text-gray-600">上一期</div>
+          <div class="text-sm">{{ page.previous.title }}</div>
+        </div>
+      </a>
+      {% else %}
+      <div></div>
+      {% endif %}
+      
+      {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" class="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition">
+        <div class="text-right">
+          <div class="text-xs text-gray-600">下一期</div>
+          <div class="text-sm">{{ page.next.title }}</div>
+        </div>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+      {% else %}
+      <div></div>
+      {% endif %}
+    </div>
+  </nav>
+</article>

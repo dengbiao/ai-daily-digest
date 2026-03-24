@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 from fetcher import NewsFetcher
 from analyzer import ContentAnalyzer
-from generator import SiteGenerator
+from jekyll_generator import JekyllGenerator
 
 
 def main():
@@ -67,19 +67,16 @@ def main():
     print(f"✓ 已生成精选 ({len(digest_items)} 条)")
     print()
     
-    # 3. 生成网站
-    print("【步骤3】生成网站...")
-    generator = SiteGenerator(
-        template_dir=str(base_dir / 'src' / 'templates'),
-        output_dir=str(base_dir / 'docs')
-    )
-    generator.generate(digest_data)
-    print("✓ 网站生成完成")
+    # 3. 生成 Jekyll 文章
+    print("【步骤3】生成 Jekyll 文章...")
+    generator = JekyllGenerator(output_dir=str(base_dir / 'docs'))
+    post_path = generator.generate(digest_data)
+    print(f"✓ 文章生成完成: {post_path.name}")
     print()
     
     print("=" * 50)
     print("构建完成!")
-    print(f"网站位置: {base_dir / 'docs'}")
+    print(f"文章位置: {post_path}")
     print(f"结束时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 50)
     

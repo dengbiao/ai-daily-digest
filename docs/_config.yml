@@ -1,0 +1,51 @@
+title: AI Daily Digest
+description: 每日AI精选资讯，汇聚全球人工智能领域最新动态
+baseurl: "/ai-daily-digest"
+url: "https://dengbiao.github.io"
+
+# Jekyll 配置
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# 分页
+paginate: 10
+paginate_path: "/page/:num/"
+
+# 作者
+author:
+  name: AI Daily Digest
+  email: digest@example.com
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# 排除文件
+exclude:
+  - scripts/
+  - src/
+  - data/
+  - venv/
+  - requirements.txt
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - "*.py"
+  - "*.pyc"
+  - "__pycache__/"
+
+# 默认设置
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<section class="mb-12">
+  <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-dark-border">
+    <h2 class="text-2xl font-bold mb-4">📰 最新AI资讯</h2>
+    <p class="text-gray-400">每日精选 {{ site.posts.size }} 期内容，汇聚全球人工智能领域最新动态</p>
+    <div class="mt-4 flex gap-4 text-sm">
+      <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">🔬 研究进展</span>
+      <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full">🏢 行业动态</span>
+      <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full">🛠️ 工具资源</span>
+    </div>
+  </div>
+</section>
+
+<!-- Posts List -->
+<section>
+  <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
+    <span>📅</span>
+    <span>历史日报</span>
+  </h3>
+  
+  <div class="space-y-6">
+    {% for post in site.posts limit:10 %}
+    <article class="bg-dark-surface border border-dark-border rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex-1">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-sm text-gray-500">{{ post.date | date: "%Y年%m月%d日" }}</span>
+            {% if post.category %}
+            <span class="px-2 py-0.5 bg-blue-500/20 text-blue-400 text-xs rounded">{{ post.category }}</span>
+            {% endif %}
+          </div>
+          
+          <h2 class="text-xl font-semibold mb-3">
+            <a href="{{ post.url | relative_url }}" class="text-gray-100 hover:text-blue-400 transition">
+              {{ post.title }}
+            </a>
+          </h2>
+          
+          <p class="text-gray-400 text-sm line-clamp-2 mb-4">
+            {{ post.excerpt | strip_html | truncate: 150 }}
+          </p>
+          
+          <div class="flex items-center gap-4 text-sm">
+            <span class="text-gray-500">📊 {{ post.news_count | default: 0 }} 条资讯</span>
+            <a href="{{ post.url | relative_url }}" class="text-blue-400 hover:text-blue-300 flex items-center gap-1">
+              阅读更多
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hidden sm:flex flex-col items-center justify-center w-16 h-16 bg-dark-bg rounded-lg border border-dark-border">
+          <span class="text-2xl font-bold text-blue-400">{{ post.date | date: "%d" }}</span>
+          <span class="text-xs text-gray-500">{{ post.date | date: "%m月" }}</span>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  
+  {% if site.posts.size > 10 %}
+  <div class="mt-8 text-center">
+    <a href="{{ '/archive' | relative_url }}" class="inline-flex items-center gap-2 px-6 py-3 bg-dark-surface border border-dark-border rounded-lg text-gray-300 hover:border-blue-500/50 hover:text-blue-400 transition">
+      查看全部 {{ site.posts.size }} 期
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
+  </div>
+  {% endif %}
+</section>
