@@ -1,6 +1,6 @@
 ---
 title: "AI日报 2026年03月25日"
-date: 2026-03-25 00:05:42 +0800
+date: 2026-03-25 00:13:17 +0800
 category: 日报
 news_count: 10
 ---
@@ -15,7 +15,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">1.</span> AI产品发现新动态
+## <span class="text-blue-400">1.</span> Powering product discovery in ChatGPT
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -24,7 +24,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">该公司在产品发现领域有新进展，值得关注。</p>
+  <p class="text-gray-300 leading-relaxed text-base">ChatGPT 推出 richer, visually immersive shopping powered by the Agentic Commerce Protocol, enabling product dis...</p>
 </div>
 
 <div class="mt-4">
@@ -46,7 +46,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">2.</span> GitHub分类处理新进展
+## <span class="text-blue-400">2.</span> Building AI-powered GitHub issue triage with th...
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -55,7 +55,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">GitHub在分类处理领域有新进展，值得关注。</p>
+  <p class="text-gray-300 leading-relaxed text-base">Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with productio...</p>
 </div>
 
 <div class="mt-4">
@@ -77,7 +77,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">3.</span> OpenAI基金会新进展
+## <span class="text-blue-400">3.</span> Update on the OpenAI Foundation
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -86,7 +86,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">OpenAI在基金会领域有新进展，值得关注。</p>
+  <p class="text-gray-300 leading-relaxed text-base">The OpenAI Foundation 宣布 plans to invest at least $1 十亿 in curing diseases, economic opportunity, AI resi...</p>
 </div>
 
 <div class="mt-4">
@@ -107,7 +107,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">4.</span> Lovable收购新进展
+## <span class="text-blue-400">4.</span> Vibe-coding startup Lovable is on the hunt for ...
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -116,7 +116,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">Lovable在收购领域有新进展，值得关注。</p>
+  <p class="text-gray-300 leading-relaxed text-base">Lovable's founder said the fast-growing vibe-coding startup is looking for startups and teams to join its company.</p>
 </div>
 
 <div class="mt-4">
@@ -134,7 +134,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">5.</span> AI视频新动态
+## <span class="text-blue-400">5.</span> Bernie Sanders’ AI ‘gotcha’ video flops, but th...
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -143,7 +143,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">该公司在视频领域有新进展，值得关注。</p>
+  <p class="text-gray-300 leading-relaxed text-base">Bernie Sanders thinks he's tricked Claude into revealing the AI industry's secrets, but he really just exposed how ag...</p>
 </div>
 
 <div class="mt-4">
@@ -164,7 +164,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">6.</span> GitHub代码新进展
+## <span class="text-blue-400">6.</span> GitHub expands application security coverage wi...
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -173,7 +173,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">GitHub在代码领域有新进展，值得关注。</p>
+  <p class="text-gray-300 leading-relaxed text-base">CodeQL and AI‑powered detections work together in GitHub Code Security to identify vulnerabilities across more langua...</p>
 </div>
 
 <div class="mt-4">
@@ -194,7 +194,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">7.</span> AI语音新动态
+## <span class="text-blue-400">7.</span> A New Framework for Evaluating Voice Agents (EVA)
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -203,7 +203,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">该公司在语音领域有新进展，值得关注。</p>
+  <p class="text-gray-300 leading-relaxed text-base">详情请查看原文。</p>
 </div>
 
 <div class="mt-4">
@@ -224,7 +224,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">8.</span> AI行业最新动态
+## <span class="text-blue-400">8.</span> The Bay Area’s animal welfare movement wants to...
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -233,7 +233,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">该公司最新消息，详情请查看原文。</p>
+  <p class="text-gray-300 leading-relaxed text-base">In early February, animal welfare advocates and AI researchers gathered in stocking feet at Mox, a scrappy, shoes-fre...</p>
 </div>
 
 <div class="mt-4">
@@ -251,7 +251,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">9.</span> Air Street Capital最新消息
+## <span class="text-blue-400">9.</span> Air Street Capital: Air Street becomes one of the largest solo VCs ...
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -260,7 +260,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">Air Street Capital最新消息，详情请查看原文。</p>
+  <p class="text-gray-300 leading-relaxed text-base">London’s Air Street Capital has raised a large Fund III with eyes locked on backing early-stage European and North Am...</p>
 </div>
 
 <div class="mt-4">
@@ -278,7 +278,7 @@ news_count: 10
 
 <article class="news-item my-8 p-6 bg-dark-surface rounded-xl border border-dark-border hover:border-blue-500/50 transition-all">
 
-## <span class="text-blue-400">10.</span> 苹果最新消息
+## <span class="text-blue-400">10.</span> 苹果: the former Apple designer building a new AI int...
 
 <div class="flex flex-wrap items-center gap-3 mb-4 text-sm">
   <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">📰 行业新闻</span>
@@ -287,7 +287,7 @@ news_count: 10
 </div>
 
 <div class="prose prose-invert max-w-none">
-  <p class="text-gray-300 leading-relaxed text-base">苹果最新消息，详情请查看原文。</p>
+  <p class="text-gray-300 leading-relaxed text-base">The company said it would design models, hardware, and interfaces in tandem to deliver a "seamless end-to-end persona...</p>
 </div>
 
 <div class="mt-4">
@@ -307,5 +307,5 @@ news_count: 10
 
 <div class="text-center text-gray-500 text-sm mt-8">
   <p>🤖 AI Daily Digest · 每日追踪AI大事件</p>
-  <p class="mt-1">生成时间: 00:05</p>
+  <p class="mt-1">生成时间: 00:13</p>
 </div>
