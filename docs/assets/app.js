@@ -1,3 +1,4 @@
+
 // AI Daily Digest - 交互功能
 
 document.addEventListener('DOMContentLoaded', function() {

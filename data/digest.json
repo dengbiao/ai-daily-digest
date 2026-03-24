@@ -1,0 +1,180 @@
+{
+  "generated_at": "2026-03-24T23:22:05.479666",
+  "items": [
+    {
+      "title": "FactorSmith: Agentic Simulation Generation via Markov Decision Process Decomposition with Planner-Designer-Critic Refinement",
+      "summary": "arXiv:2603.20270v1 Announce Type: new \nAbstract: Generating executable simulations from natural language specifications remains a challenging problem due to the limited reasoning capacity of large language models (LLMs) when confronted with large, interconnected codebases.",
+      "importance": 10,
+      "category": "🔬 研究进展",
+      "sources": [
+        {
+          "name": "arXiv CS.AI",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "item_url": "https://arxiv.org/abs/2603.20270"
+        }
+      ],
+      "tags": [
+        "LLM",
+        "Agent",
+        "Research"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "Domain-Specialized Tree of Thought through Plug-and-Play Predictors",
+      "summary": "arXiv:2603.20267v1 Announce Type: new \nAbstract: While Large Language Models (LLMs) have advanced complex reasoning, prominent methods like the Tree of Thoughts (ToT) framework face a critical trade-off between exploration depth and computational efficiency.",
+      "importance": 9,
+      "category": "🔬 研究进展",
+      "sources": [
+        {
+          "name": "arXiv CS.AI",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "item_url": "https://arxiv.org/abs/2603.20267"
+        }
+      ],
+      "tags": [
+        "LLM"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "Deep reflective reasoning in interdependence constrained structured data extraction from clinical notes for digital health",
+      "summary": "arXiv:2603.20435v1 Announce Type: new \nAbstract: Extracting structured information from clinical notes requires navigating a dense web of interdependent variables where the value of one attribute logically constrains others.",
+      "importance": 9,
+      "category": "🔬 研究进展",
+      "sources": [
+        {
+          "name": "arXiv CS.AI",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "item_url": "https://arxiv.org/abs/2603.20435"
+        }
+      ],
+      "tags": [
+        "LLM",
+        "Agent"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "LLM-Enhanced Energy Contrastive Learning for Out-of-Distribution Detection in Text-Attributed Graphs",
+      "summary": "arXiv:2603.20293v1 Announce Type: new \nAbstract: Text-attributed graphs, where nodes are enriched with textual attributes, have become a powerful tool for modeling real-world networks such as citation, social, and transaction networks.",
+      "importance": 9,
+      "category": "🔬 研究进展",
+      "sources": [
+        {
+          "name": "arXiv CS.AI",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "item_url": "https://arxiv.org/abs/2603.20293"
+        }
+      ],
+      "tags": [
+        "LLM",
+        "Research"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "ProMAS: Proactive Error Forecasting for Multi-Agent Systems Using Markov Transition Dynamics",
+      "summary": "arXiv:2603.20260v1 Announce Type: new \nAbstract: The integration of Large Language Models into Multi-Agent Systems (MAS) has enabled the so-lution of complex, long-horizon tasks through collaborative reasoning.",
+      "importance": 9,
+      "category": "🔬 研究进展",
+      "sources": [
+        {
+          "name": "arXiv CS.AI",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "item_url": "https://arxiv.org/abs/2603.20260"
+        }
+      ],
+      "tags": [
+        "LLM",
+        "Agent",
+        "Research"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "AgenticGEO: A Self-Evolving Agentic System for Generative Engine Optimization",
+      "summary": "arXiv:2603.20213v1 Announce Type: new \nAbstract: Generative search engines represent a transition from traditional ranking-based retrieval to Large Language Model (LLM)-based synthesis, transforming optimization goals from ranking prominence towards content inclusion.",
+      "importance": 8,
+      "category": "🔬 研究进展",
+      "sources": [
+        {
+          "name": "arXiv CS.AI",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "item_url": "https://arxiv.org/abs/2603.20213"
+        }
+      ],
+      "tags": [
+        "LLM",
+        "Agent"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "AgentComm-Bench: Stress-Testing Cooperative Embodied AI Under Latency, Packet Loss, and Bandwidth Collapse",
+      "summary": "arXiv:2603.20285v1 Announce Type: new \nAbstract: Cooperative multi-agent methods for embodied AI are almost universally evaluated under idealized communication: zero latency, no packet loss, and unlimited bandwidth.",
+      "importance": 8,
+      "category": "🔬 研究进展",
+      "sources": [
+        {
+          "name": "arXiv CS.AI",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "item_url": "https://arxiv.org/abs/2603.20285"
+        }
+      ],
+      "tags": [
+        "Agent"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "Me, Myself, and $\\pi$ : Evaluating and Explaining LLM Introspection",
+      "summary": "arXiv:2603.20276v1 Announce Type: new \nAbstract: A hallmark of human intelligence is Introspection-the ability to assess and reason about one's own cognitive processes. Introspection has emerged as a promising but contested capability in large language models (LLMs).",
+      "importance": 7,
+      "category": "🔬 研究进展",
+      "sources": [
+        {
+          "name": "arXiv CS.AI",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "item_url": "https://arxiv.org/abs/2603.20276"
+        }
+      ],
+      "tags": [
+        "LLM"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "Beyond the Vector Store: Building the Full Data Layer for AI Applications",
+      "summary": "If you look at the architecture diagram of almost any AI startup today, you will see a large language model (LLM) connected to a vector store.",
+      "importance": 7,
+      "category": "📚 教程学习",
+      "sources": [
+        {
+          "name": "Machine Learning Mastery",
+          "url": "https://machinelearningmastery.com",
+          "item_url": "https://machinelearningmastery.com/beyond-the-vector-store-building-the-full-data-layer-for-ai-applications/"
+        }
+      ],
+      "tags": [
+        "LLM"
+      ],
+      "related_urls": []
+    },
+    {
+      "title": "Compression is all you need: Modeling Mathematics",
+      "summary": "arXiv:2603.20396v1 Announce Type: new \nAbstract: Human mathematics (HM), the mathematics humans discover and value, is a vanishingly small subset of formal mathematics (FM), the totality of all valid deductions.",
+      "importance": 7,
+      "category": "🔬 研究进展",
+      "sources": [
+        {
+          "name": "arXiv CS.AI",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "item_url": "https://arxiv.org/abs/2603.20396"
+        }
+      ],
+      "tags": [],
+      "related_urls": []
+    }
+  ]
+}

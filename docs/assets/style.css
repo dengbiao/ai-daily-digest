@@ -1,3 +1,4 @@
+
 /* AI Daily Digest - 响应式样式 */
 
 :root {
@@ -300,6 +301,30 @@ footer a {
 
 .news-item {
     animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.loading::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--surface-light);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Scroll to top */

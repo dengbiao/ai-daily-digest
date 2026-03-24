@@ -207,8 +207,8 @@ class ContentAnalyzer:
         
         # 收集相关链接
         related_urls = []
-        if 'related_sources' in item:
-            related_urls = [s['item_url'] for s in item['related_sources']]
+        if item.get('related_sources'):
+            related_urls = [s['item_url'] for s in item['related_sources'] if s.get('item_url')]
         
         # 主信息源
         sources = item.get('sources', [{
