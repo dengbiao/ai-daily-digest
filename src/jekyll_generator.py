@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AI Daily Digest - Jekyll 网站生成器（列表样式版）
+AI Daily Digest - Jekyll 网站生成器（微信风格版）
 生成中文 Jekyll 格式的文章和页面
 """
 
@@ -43,26 +43,28 @@ class JekyllGenerator:
         return filepath
     
     def _generate_post_content(self, data: dict, date: datetime) -> str:
-        """生成文章 Markdown 内容 - 列表样式"""
+        """生成文章 Markdown 内容 - 微信风格"""
         items = data.get('items', [])
+        date_str = date.strftime('%Y年%m月%d日')
         
-        # Front Matter
         lines = [
             '---',
-            f'title: "AI日报 {date.strftime("%Y年%m月%d日")}"',
+            f'title: "AI日报 {date_str}"',
             f'date: {date.strftime("%Y-%m-%d %H:%M:%S")} +0800',
             'category: 日报',
             f'news_count: {len(items)}',
             '---',
             '',
+            '<div class="container">',
+            '',
             '<!-- 日报头部 -->',
-            '<div class="daily-header">',
+            '<header class="daily-header">',
+            f'  <h1 class="daily-title">AI日报 {date_str}</h1>',
             '  <div class="daily-meta">',
-            f'    <span class="daily-count">{len(items)}</span>',
-            '    <span class="daily-label">条精选资讯</span>',
+            f'    <span class="date">{date_str}</span>',
+            f'    <span class="count">{len(items)} 条资讯</span>',
             '  </div>',
-            '  <p class="daily-desc">聚焦 AI 产品发布、公司动态、行业突破</p>',
-            '</div>',
+            '</header>',
             '',
             '<!-- 新闻列表 -->',
             '<div class="news-list">',
@@ -79,21 +81,22 @@ class JekyllGenerator:
         # 页脚
         lines.extend([
             '<!-- 日报页脚 -->',
-            '<div class="daily-footer">',
-            '  <p>🤖 AI Daily Digest · 每日追踪AI大事件</p>',
+            '<footer class="daily-footer">',
+            '  <p>AI Daily Digest · 每日追踪AI大事件</p>',
+            '</footer>',
+            '',
             '</div>',
         ])
         
         return '\n'.join(lines)
     
     def _generate_news_section(self, item: dict, index: int) -> list:
-        """生成单条新闻的 Markdown - 列表样式"""
+        """生成单条新闻的 Markdown - 微信风格"""
         # 优先使用已翻译的内容
         if 'cn_title' in item and 'cn_summary' in item:
             cn_title = item['cn_title']
             cn_summary = item['cn_summary']
         else:
-            # 翻译标题和摘要
             event_type = item.get('event_type', '行业新闻')
             cn_title, cn_summary = self.cn_generator.translate_and_summarize(
                 item['title'], 
@@ -108,40 +111,36 @@ class JekyllGenerator:
         
         # 热度等级
         if importance >= 9:
-            heat_level = 'high'
+            heat_class = 'heat-high'
         elif importance >= 7:
-            heat_level = 'medium'
+            heat_class = 'heat-medium'
         else:
-            heat_level = 'normal'
+            heat_class = 'heat-normal'
         
         # 获取来源链接
         sources = item.get('sources', [])
-        source_html = ''
-        if sources:
-            source = sources[0]  # 只显示第一个来源
-            source_html = f'<a href="{source["item_url"]}" target="_blank" rel="noopener" class="source-link">{source["name"]}</a>'
+        source_name = sources[0]['name'] if sources else '原文'
+        source_url = sources[0]['item_url'] if sources else '#'
         
         # 获取标签
         tags = item.get('tags', [])
-        tags_html = ''
-        if tags:
-            tags_html = ' '.join([f'<span class="tag">#{tag}</span>' for tag in tags[:3]])
+        tags_html = ' '.join([f'<span class="tag">{tag}</span>' for tag in tags[:3]]) if tags else ''
         
         lines = [
             f'<!-- 新闻 {index} -->',
-            f'<article class="news-item heat-{heat_level}">',
+            f'<article class="news-item">',
             '',
             '  <div class="news-header">',
             f'    <span class="news-number">{index:02d}</span>',
             f'    <span class="news-type">{event_label}</span>',
             '  </div>',
             '',
-            f'  <h2 class="news-title"><a href="{sources[0]["item_url"] if sources else "#"}" target="_blank" rel="noopener">{cn_title}</a></h2>',
+            f'  <h2 class="news-title"><a href="{source_url}" target="_blank" rel="noopener">{cn_title}</a></h2>',
             '',
             f'  <p class="news-summary">{cn_summary}</p>',
             '',
-            '  <div class="news-meta-row">',
-            f'    {source_html}',
+            '  <div class="news-footer">',
+            f'    <a href="{source_url}" target="_blank" rel="noopener" class="source-link">{source_name}</a>',
             f'    {tags_html}',
             '  </div>',
             '',
