@@ -1,6 +1,6 @@
 ---
 title: "AI日报 2026年03月25日"
-date: 2026-03-25 01:08:24 +0800
+date: 2026-03-25 06:04:04 +0800
 category: 日报
 news_count: 10
 ---
@@ -24,6 +24,25 @@ news_count: 10
 
   <div class="news-header">
     <span class="news-number">01</span>
+    <span class="news-type">🚀 产品发布</span>
+  </div>
+
+  <h2 class="news-title"><a href="https://openai.com/index/teen-safety-policies-gpt-oss-safeguard" target="_blank" rel="noopener">OpenAI：Helping developers build safer AI</a></h2>
+
+  <p class="news-summary">OpenAI发布重要更新，点击查看详情了解完整信息。</p>
+
+  <div class="news-footer">
+    <a href="https://openai.com/index/teen-safety-policies-gpt-oss-safeguard" target="_blank" rel="noopener" class="source-link">OpenAI 官方博客</a>
+    <span class="tag">OpenAI</span> <span class="tag">产品发布</span>
+  </div>
+
+</article>
+
+<!-- 新闻 2 -->
+<article class="news-item">
+
+  <div class="news-header">
+    <span class="news-number">02</span>
     <span class="news-type">📰 行业新闻</span>
   </div>
 
@@ -38,11 +57,49 @@ news_count: 10
 
 </article>
 
-<!-- 新闻 2 -->
+<!-- 新闻 3 -->
 <article class="news-item">
 
   <div class="news-header">
-    <span class="news-number">02</span>
+    <span class="news-number">03</span>
+    <span class="news-type">⚡ 重大更新</span>
+  </div>
+
+  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/" target="_blank" rel="noopener">Google：Google TV’s new Gemini features</a></h2>
+
+  <p class="news-summary">Google发布重要更新，点击查看详情了解完整信息。</p>
+
+  <div class="news-footer">
+    <a href="https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
+    <span class="tag">Google</span>
+  </div>
+
+</article>
+
+<!-- 新闻 4 -->
+<article class="news-item">
+
+  <div class="news-header">
+    <span class="news-number">04</span>
+    <span class="news-type">🔓 开源发布</span>
+  </div>
+
+  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/" target="_blank" rel="noopener">OpenAI：OpenAI adds open source tools</a></h2>
+
+  <p class="news-summary">OpenAI发布重要更新，点击查看详情了解完整信息。</p>
+
+  <div class="news-footer">
+    <a href="https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
+    <span class="tag">OpenAI</span> <span class="tag">开源</span>
+  </div>
+
+</article>
+
+<!-- 新闻 5 -->
+<article class="news-item">
+
+  <div class="news-header">
+    <span class="news-number">05</span>
     <span class="news-type">🔓 开源发布</span>
   </div>
 
@@ -57,11 +114,11 @@ news_count: 10
 
 </article>
 
-<!-- 新闻 3 -->
+<!-- 新闻 6 -->
 <article class="news-item">
 
   <div class="news-header">
-    <span class="news-number">03</span>
+    <span class="news-number">06</span>
     <span class="news-type">⚡ 重大更新</span>
   </div>
 
@@ -76,63 +133,6 @@ news_count: 10
 
 </article>
 
-<!-- 新闻 4 -->
-<article class="news-item">
-
-  <div class="news-header">
-    <span class="news-number">04</span>
-    <span class="news-type">🏢 公司动态</span>
-  </div>
-
-  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/23/vibe-coding-startup-lovable-is-on-the-hunt-for-acquisitions/" target="_blank" rel="noopener">Lovable寻求收购以加速发展</a></h2>
-
-  <p class="news-summary">公司创始人透露，这家快速成长的品味编码初创企业正寻找合作伙伴或团队加入，以扩展其业务版图。</p>
-
-  <div class="news-footer">
-    <a href="https://techcrunch.com/2026/03/23/vibe-coding-startup-lovable-is-on-the-hunt-for-acquisitions/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
-    
-  </div>
-
-</article>
-
-<!-- 新闻 5 -->
-<article class="news-item">
-
-  <div class="news-header">
-    <span class="news-number">05</span>
-    <span class="news-type">📰 行业新闻</span>
-  </div>
-
-  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/23/bernie-sanders-ai-gotcha-video-flops-but-the-memes-are-great/" target="_blank" rel="noopener">桑德斯的AI“陷阱”视频失败，但表情包火了</a></h2>
-
-  <p class="news-summary">伯尼·桑德斯试图通过Claude揭露AI行业的秘密，但实际上只展示了聊天机器人的配合度有多高。</p>
-
-  <div class="news-footer">
-    <a href="https://techcrunch.com/2026/03/23/bernie-sanders-ai-gotcha-video-flops-but-the-memes-are-great/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
-    <span class="tag">Anthropic</span>
-  </div>
-
-</article>
-
-<!-- 新闻 6 -->
-<article class="news-item">
-
-  <div class="news-header">
-    <span class="news-number">06</span>
-    <span class="news-type">🔓 开源发布</span>
-  </div>
-
-  <h2 class="news-title"><a href="https://github.blog/security/application-security/github-expands-application-security-coverage-with-ai-powered-detections/" target="_blank" rel="noopener">GitHub增强AI检测，拓展应用安全覆盖</a></h2>
-
-  <p class="news-summary">GitHub Code Security利用CodeQL和AI技术识别多种语言和框架中的漏洞，提升应用安全检测能力。</p>
-
-  <div class="news-footer">
-    <a href="https://github.blog/security/application-security/github-expands-application-security-coverage-with-ai-powered-detections/" target="_blank" rel="noopener" class="source-link">GitHub 博客</a>
-    <span class="tag">开源</span>
-  </div>
-
-</article>
-
 <!-- 新闻 7 -->
 <article class="news-item">
 
@@ -141,13 +141,13 @@ news_count: 10
     <span class="news-type">📰 行业新闻</span>
   </div>
 
-  <h2 class="news-title"><a href="https://huggingface.co/blog/ServiceNow-AI/eva" target="_blank" rel="noopener">语音代理评估新框架出炉</a></h2>
+  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/" target="_blank" rel="noopener">Anthropic：Anthropic hands Claude Code more</a></h2>
 
-  <p class="news-summary">EVA新框架旨在为评估语音代理提供系统化方法，通过多维度测试分析，助力语音技术优化和高效应用，推动智能语音领域发展。</p>
+  <p class="news-summary">Anthropic发布重要更新，点击查看详情了解完整信息。</p>
 
   <div class="news-footer">
-    <a href="https://huggingface.co/blog/ServiceNow-AI/eva" target="_blank" rel="noopener" class="source-link">Hugging Face 博客</a>
-    <span class="tag">智能体</span>
+    <a href="https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
+    <span class="tag">Anthropic</span>
   </div>
 
 </article>
@@ -160,13 +160,13 @@ news_count: 10
     <span class="news-type">📰 行业新闻</span>
   </div>
 
-  <h2 class="news-title"><a href="https://www.technologyreview.com/2026/03/23/1134491/the-bay-areas-animal-welfare-movement-wants-to-recruit-ai/" target="_blank" rel="noopener">旧金山动物福利运动寻求AI助力</a></h2>
+  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/openais-plans-to-make-chatgpt-more-like-amazon-arent-going-so-well/" target="_blank" rel="noopener">OpenAI：OpenAI’s plans to make ChatGPT</a></h2>
 
-  <p class="news-summary">二月初，旧金山一家不拘一格的共享工作空间Mox中，动物福利倡导者和AI研究者齐聚一堂，共同探讨如何联合AI技术推进动物福利事业。</p>
+  <p class="news-summary">OpenAI发布重要更新，点击查看详情了解完整信息。</p>
 
   <div class="news-footer">
-    <a href="https://www.technologyreview.com/2026/03/23/1134491/the-bay-areas-animal-welfare-movement-wants-to-recruit-ai/" target="_blank" rel="noopener" class="source-link">MIT Technology Review - AI</a>
-    
+    <a href="https://techcrunch.com/2026/03/24/openais-plans-to-make-chatgpt-more-like-amazon-arent-going-so-well/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
+    <span class="tag">OpenAI</span>
   </div>
 
 </article>
@@ -179,12 +179,12 @@ news_count: 10
     <span class="news-type">📰 行业新闻</span>
   </div>
 
-  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/23/air-street-becomes-one-of-the-largest-solo-vcs-in-europe-with-232m-fund/" target="_blank" rel="noopener">欧洲最大个人创投之一成立 募资2.32亿美元</a></h2>
+  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/" target="_blank" rel="noopener">Talat’s AI meeting notes stay</a></h2>
 
-  <p class="news-summary">伦敦Air Street Capital宣布成立规模达2.32亿美元的第三支基金，专注于投资早期的欧洲和北美人工智能企业。</p>
+  <p class="news-summary">点击查看原文了解详情。</p>
 
   <div class="news-footer">
-    <a href="https://techcrunch.com/2026/03/23/air-street-becomes-one-of-the-largest-solo-vcs-in-europe-with-232m-fund/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
+    <a href="https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
     
   </div>
 
@@ -195,16 +195,16 @@ news_count: 10
 
   <div class="news-header">
     <span class="news-number">10</span>
-    <span class="news-type">📰 行业新闻</span>
+    <span class="news-type">🔓 开源发布</span>
   </div>
 
-  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/meet-the-former-apple-designer-building-a-new-ai-interface-at-hark/" target="_blank" rel="noopener">苹果前设计师助力打造Hark新一代AI界面</a></h2>
+  <h2 class="news-title"><a href="https://github.blog/security/application-security/github-expands-application-security-coverage-with-ai-powered-detections/" target="_blank" rel="noopener">GitHub增强AI检测，拓展应用安全覆盖</a></h2>
 
-  <p class="news-summary">Hark宣布将同步设计模型、硬件和界面，打造“无缝端到端个人智能产品”。</p>
+  <p class="news-summary">GitHub Code Security利用CodeQL和AI技术识别多种语言和框架中的漏洞，提升应用安全检测能力。</p>
 
   <div class="news-footer">
-    <a href="https://techcrunch.com/2026/03/24/meet-the-former-apple-designer-building-a-new-ai-interface-at-hark/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
-    
+    <a href="https://github.blog/security/application-security/github-expands-application-security-coverage-with-ai-powered-detections/" target="_blank" rel="noopener" class="source-link">GitHub 博客</a>
+    <span class="tag">开源</span>
   </div>
 
 </article>

@@ -1,6 +1,27 @@
 {
-  "generated_at": "2026-03-25T00:51:45.866851",
+  "generated_at": "2026-03-25T06:03:59.753210",
   "items": [
+    {
+      "title": "Helping developers build safer AI experiences for teens",
+      "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+      "importance": 10,
+      "category": "🔥 行业动态",
+      "sources": [
+        {
+          "name": "OpenAI 官方博客",
+          "url": "https://openai.com/news",
+          "item_url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "产品发布"
+      ],
+      "related_urls": [],
+      "event_type": "产品发布",
+      "cn_title": "OpenAI：Helping developers build safer AI",
+      "cn_summary": "OpenAI发布重要更新，点击查看详情了解完整信息。"
+    },
     {
       "title": "Powering product discovery in ChatGPT",
       "summary": "ChatGPT introduces richer, visually immersive shopping powered by the Agentic Commerce Protocol, enabling product discovery, side-by-side comparisons, and merchant integration.",
@@ -21,6 +42,47 @@
       "event_type": "行业新闻",
       "cn_title": "ChatGPT携手Agentic Commerce协议升级购物体验",
       "cn_summary": "ChatGPT通过引入Agentic Commerce协议，实现更丰富的视觉沉浸式购物体验，支持产品发现、并行比较和商家集成。"
+    },
+    {
+      "title": "Google TV’s new Gemini features keep fans updated on sports teams and more",
+      "summary": "Three Gemini-powered features are coming to your Google TV. This includes visual responses, deep dives, and sports briefs.",
+      "importance": 10,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/"
+        }
+      ],
+      "tags": [
+        "Google"
+      ],
+      "related_urls": [],
+      "event_type": "重大更新",
+      "cn_title": "Google：Google TV’s new Gemini features",
+      "cn_summary": "Google发布重要更新，点击查看详情了解完整信息。"
+    },
+    {
+      "title": "OpenAI adds open source tools to help developers build for teen safety",
+      "summary": "Rather than working from scratch to figure out how to make AI safer for teens, developers can use these policies to fortify what they build.",
+      "importance": 10,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "开源"
+      ],
+      "related_urls": [],
+      "event_type": "开源发布",
+      "cn_title": "OpenAI：OpenAI adds open source tools",
+      "cn_summary": "OpenAI发布重要更新，点击查看详情了解完整信息。"
     },
     {
       "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
@@ -64,33 +126,15 @@
       "cn_summary": "OpenAI基金会宣布，将至少投资10亿美元于疾病治疗、经济机会、人工智能韧性提升和社区项目，以推动相关领域发展。"
     },
     {
-      "title": "Vibe-coding startup Lovable is on the hunt for acquisitions",
-      "summary": "Lovable's founder said the fast-growing vibe-coding startup is looking for startups and teams to join its company.",
+      "title": "Anthropic hands Claude Code more control, but keeps it on a leash",
+      "summary": "Anthropic’s new auto mode for Claude Code lets AI execute tasks with fewer approvals, reflecting a broader shift toward more autonomous tools that balance speed with safety through built-in safeguards.",
       "importance": 9,
       "category": "📰 新闻资讯",
       "sources": [
         {
           "name": "TechCrunch - AI",
           "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/23/vibe-coding-startup-lovable-is-on-the-hunt-for-acquisitions/"
-        }
-      ],
-      "tags": [],
-      "related_urls": [],
-      "event_type": "公司动态",
-      "cn_title": "Lovable寻求收购以加速发展",
-      "cn_summary": "公司创始人透露，这家快速成长的品味编码初创企业正寻找合作伙伴或团队加入，以扩展其业务版图。"
-    },
-    {
-      "title": "Bernie Sanders’ AI ‘gotcha’ video flops, but the memes are great",
-      "summary": "Sen. Bernie Sanders thinks he's tricked Claude into revealing the AI industry's secrets, but he really just exposed how agreeable chatbots can become.",
-      "importance": 8,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/23/bernie-sanders-ai-gotcha-video-flops-but-the-memes-are-great/"
+          "item_url": "https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/"
         }
       ],
       "tags": [
@@ -98,8 +142,46 @@
       ],
       "related_urls": [],
       "event_type": "行业新闻",
-      "cn_title": "桑德斯的AI“陷阱”视频失败，但表情包火了",
-      "cn_summary": "伯尼·桑德斯试图通过Claude揭露AI行业的秘密，但实际上只展示了聊天机器人的配合度有多高。"
+      "cn_title": "Anthropic：Anthropic hands Claude Code more",
+      "cn_summary": "Anthropic发布重要更新，点击查看详情了解完整信息。"
+    },
+    {
+      "title": "OpenAI’s plans to make ChatGPT more like Amazon aren’t going so well",
+      "summary": "OpenAI says it's moving away from Instant Checkout, which allowed users to buy items directly through the ChatGPT interface.",
+      "importance": 9,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/24/openais-plans-to-make-chatgpt-more-like-amazon-arent-going-so-well/"
+        }
+      ],
+      "tags": [
+        "OpenAI"
+      ],
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "OpenAI：OpenAI’s plans to make ChatGPT",
+      "cn_summary": "OpenAI发布重要更新，点击查看详情了解完整信息。"
+    },
+    {
+      "title": "Talat’s AI meeting notes stay on your machine, not in the cloud",
+      "summary": "The subscription-free AI meeting notes app is a local-first twist on notetaking tools like Granola.",
+      "importance": 9,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/"
+        }
+      ],
+      "tags": [],
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "Talat’s AI meeting notes stay",
+      "cn_summary": "点击查看原文了解详情。"
     },
     {
       "title": "GitHub expands application security coverage with AI‑powered detections",
@@ -120,80 +202,6 @@
       "event_type": "开源发布",
       "cn_title": "GitHub增强AI检测，拓展应用安全覆盖",
       "cn_summary": "GitHub Code Security利用CodeQL和AI技术识别多种语言和框架中的漏洞，提升应用安全检测能力。"
-    },
-    {
-      "title": "A New Framework for Evaluating Voice Agents (EVA)",
-      "summary": "",
-      "importance": 8,
-      "category": "🛠️ 工具资源",
-      "sources": [
-        {
-          "name": "Hugging Face 博客",
-          "url": "https://huggingface.co/blog",
-          "item_url": "https://huggingface.co/blog/ServiceNow-AI/eva"
-        }
-      ],
-      "tags": [
-        "智能体"
-      ],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "语音代理评估新框架出炉",
-      "cn_summary": "EVA新框架旨在为评估语音代理提供系统化方法，通过多维度测试分析，助力语音技术优化和高效应用，推动智能语音领域发展。"
-    },
-    {
-      "title": "The Bay Area’s animal welfare movement wants to recruit AI",
-      "summary": "In early February, animal welfare advocates and AI researchers gathered in stocking feet at Mox, a scrappy, shoes-free coworking space in San Francisco.",
-      "importance": 8,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "MIT Technology Review - AI",
-          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
-          "item_url": "https://www.technologyreview.com/2026/03/23/1134491/the-bay-areas-animal-welfare-movement-wants-to-recruit-ai/"
-        }
-      ],
-      "tags": [],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "旧金山动物福利运动寻求AI助力",
-      "cn_summary": "二月初，旧金山一家不拘一格的共享工作空间Mox中，动物福利倡导者和AI研究者齐聚一堂，共同探讨如何联合AI技术推进动物福利事业。"
-    },
-    {
-      "title": "Air Street becomes one of the largest solo VCs in Europe with $232M fund",
-      "summary": "London’s Air Street Capital has raised a large Fund III with eyes locked on backing early-stage European and North American AI companies.",
-      "importance": 8,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/23/air-street-becomes-one-of-the-largest-solo-vcs-in-europe-with-232m-fund/"
-        }
-      ],
-      "tags": [],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "欧洲最大个人创投之一成立 募资2.32亿美元",
-      "cn_summary": "伦敦Air Street Capital宣布成立规模达2.32亿美元的第三支基金，专注于投资早期的欧洲和北美人工智能企业。"
-    },
-    {
-      "title": "Meet the former Apple designer building a new AI interface at Hark",
-      "summary": "The company said it would design models, hardware, and interfaces in tandem to deliver a \"seamless end-to-end personal intelligence product.\"",
-      "importance": 7,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/meet-the-former-apple-designer-building-a-new-ai-interface-at-hark/"
-        }
-      ],
-      "tags": [],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "苹果前设计师助力打造Hark新一代AI界面",
-      "cn_summary": "Hark宣布将同步设计模型、硬件和界面，打造“无缝端到端个人智能产品”。"
     }
   ]
 }
