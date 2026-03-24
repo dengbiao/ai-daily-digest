@@ -1,49 +1,94 @@
 {
   "sources": [
     {
-      "id": "huggingface-blog",
-      "name": "Hugging Face Blog",
-      "url": "https://huggingface.co/blog",
-      "type": "rss",
-      "rss_url": "https://huggingface.co/blog/feed.xml",
-      "category": "research",
-      "weight": 1.0
-    },
-    {
       "id": "openai-blog",
-      "name": "OpenAI News",
+      "name": "OpenAI 官方博客",
       "url": "https://openai.com/news",
       "type": "rss",
       "rss_url": "https://openai.com/news/rss.xml",
-      "category": "industry",
-      "weight": 1.0
+      "category": "行业动态",
+      "weight": 1.0,
+      "focus": "产品发布、公司动态、重大更新"
     },
     {
-      "id": "anthropic-blog",
-      "name": "Anthropic News",
+      "id": "anthropic-news",
+      "name": "Anthropic 新闻",
       "url": "https://www.anthropic.com/news",
       "type": "rss",
       "rss_url": "https://www.anthropic.com/news/rss.xml",
-      "category": "industry",
-      "weight": 1.0
+      "category": "行业动态",
+      "weight": 1.0,
+      "focus": "Claude更新、安全研究、公司动态"
     },
     {
       "id": "google-ai-blog",
-      "name": "Google AI Blog",
+      "name": "Google AI 博客",
       "url": "https://ai.googleblog.com",
       "type": "rss",
       "rss_url": "https://ai.googleblog.com/feeds/posts/default",
-      "category": "research",
-      "weight": 0.9
+      "category": "行业动态",
+      "weight": 0.9,
+      "focus": "Gemini更新、Google AI产品"
     },
     {
-      "id": "arxiv-cs-ai",
-      "name": "arXiv CS.AI",
-      "url": "https://arxiv.org/list/cs.AI/recent",
+      "id": "deepmind-blog",
+      "name": "DeepMind 博客",
+      "url": "https://deepmind.google/discover/blog/",
       "type": "rss",
-      "rss_url": "https://rss.arxiv.org/rss/cs.AI",
-      "category": "research",
-      "weight": 0.8
+      "rss_url": "https://deepmind.google/discover/blog/rss.xml",
+      "category": "行业动态",
+      "weight": 0.9,
+      "focus": "DeepMind研究、Alpha系列更新"
+    },
+    {
+      "id": "microsoft-ai",
+      "name": "Microsoft AI 博客",
+      "url": "https://blogs.microsoft.com/ai/",
+      "type": "rss",
+      "rss_url": "https://blogs.microsoft.com/ai/feed/",
+      "category": "行业动态",
+      "weight": 0.9,
+      "focus": "Copilot更新、Azure AI、微软AI产品"
+    },
+    {
+      "id": "meta-ai",
+      "name": "Meta AI",
+      "url": "https://ai.meta.com/blog/",
+      "type": "rss",
+      "rss_url": "https://ai.meta.com/blog/rss/",
+      "category": "行业动态",
+      "weight": 0.9,
+      "focus": "Llama模型、Meta AI产品、开源动态"
+    },
+    {
+      "id": "huggingface-blog",
+      "name": "Hugging Face 博客",
+      "url": "https://huggingface.co/blog",
+      "type": "rss",
+      "rss_url": "https://huggingface.co/blog/feed.xml",
+      "category": "工具资源",
+      "weight": 0.8,
+      "focus": "开源模型、工具发布、社区动态"
+    },
+    {
+      "id": "stability-ai",
+      "name": "Stability AI",
+      "url": "https://stability.ai/news",
+      "type": "rss",
+      "rss_url": "https://stability.ai/news/rss.xml",
+      "category": "行业动态",
+      "weight": 0.8,
+      "focus": "Stable Diffusion更新、图像生成"
+    },
+    {
+      "id": "nvidia-blog",
+      "name": "NVIDIA 博客",
+      "url": "https://blogs.nvidia.com/ai/",
+      "type": "rss",
+      "rss_url": "https://blogs.nvidia.com/ai/feed/",
+      "category": "行业动态",
+      "weight": 0.8,
+      "focus": "GPU、AI基础设施、生成式AI"
     },
     {
       "id": "mit-tech-review",
@@ -51,8 +96,9 @@
       "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
       "type": "rss",
       "rss_url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
-      "category": "news",
-      "weight": 0.9
+      "category": "新闻资讯",
+      "weight": 0.9,
+      "focus": "AI行业深度报道、趋势分析"
     },
     {
       "id": "venturebeat-ai",
@@ -60,57 +106,66 @@
       "url": "https://venturebeat.com/ai/",
       "type": "rss",
       "rss_url": "https://venturebeat.com/category/ai/feed/",
-      "category": "news",
-      "weight": 0.7
+      "category": "新闻资讯",
+      "weight": 0.8,
+      "focus": "AI商业新闻、投融资动态"
     },
     {
-      "id": "machine-learning-mastery",
-      "name": "Machine Learning Mastery",
-      "url": "https://machinelearningmastery.com",
+      "id": "the-verge-ai",
+      "name": "The Verge - AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence",
       "type": "rss",
-      "rss_url": "https://machinelearningmastery.com/feed/",
-      "category": "tutorial",
-      "weight": 0.6
+      "rss_url": "https://www.theverge.com/ai-artificial-intelligence/rss/index.xml",
+      "category": "新闻资讯",
+      "weight": 0.8,
+      "focus": "AI产品新闻、消费级AI"
     },
     {
-      "id": "papers-with-code",
-      "name": "Papers With Code",
-      "url": "https://paperswithcode.com",
-      "type": "api",
-      "api_url": "https://paperswithcode.com/api/v1/papers/",
-      "category": "research",
-      "weight": 0.9
+      "id": "techcrunch-ai",
+      "name": "TechCrunch - AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/",
+      "type": "rss",
+      "rss_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "category": "新闻资讯",
+      "weight": 0.8,
+      "focus": "AI创业公司、行业动态"
     },
     {
-      "id": "github-trending-ml",
-      "name": "GitHub Trending - ML",
-      "url": "https://github.com/trending?l=python&since=daily",
-      "type": "scrape",
-      "category": "tools",
-      "weight": 0.7
+      "id": "wired-ai",
+      "name": "Wired - AI",
+      "url": "https://www.wired.com/tag/artificial-intelligence/",
+      "type": "rss",
+      "rss_url": "https://www.wired.com/feed/tag/artificial-intelligence/latest/rss",
+      "category": "新闻资讯",
+      "weight": 0.7,
+      "focus": "AI技术趋势、深度报道"
+    },
+    {
+      "id": "github-blog",
+      "name": "GitHub 博客",
+      "url": "https://github.blog/",
+      "type": "rss",
+      "rss_url": "https://github.blog/feed/",
+      "category": "工具资源",
+      "weight": 0.7,
+      "focus": "GitHub Copilot、AI编程工具"
     }
   ],
-  "aggregators": [
-    {
-      "id": "ai-jobs",
-      "name": "AI Jobs Newsletter",
-      "url": "https://aijobs.net/newsletter/",
-      "type": "newsletter",
-      "category": "jobs"
-    },
-    {
-      "id": "import-ai",
-      "name": "Import AI",
-      "url": "https://importai.substack.com",
-      "type": "newsletter",
-      "category": "news"
-    },
-    {
-      "id": "the-batch",
-      "name": "The Batch",
-      "url": "https://www.deeplearning.ai/the-batch/",
-      "type": "newsletter",
-      "category": "news"
-    }
-  ]
+  "filters": {
+    "exclude_keywords": [
+      "arxiv", "paper", "research", "study", "experiment", "dataset",
+      "benchmark", "baseline", "ablation", "appendix", "theorem",
+      "lemma", "proof", "corollary", "hypothesis"
+    ],
+    "include_keywords": [
+      "launch", "release", "announce", "introduce", "unveil",
+      "发布", "推出", "上线", "更新", "新版本",
+      "product", "feature", "tool", "platform", "service",
+      "融资", "收购", "合作", "投资", "并购",
+      "open source", "开源", "github", "available",
+      "chatgpt", "claude", "gemini", "copilot", "llama",
+      "gpt-4", "gpt-5", "gpt-6", "o1", "o3"
+    ],
+    "min_importance": 7
+  }
 }

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
 AI Daily Digest - 内容分析模块
-使用AI分析新闻内容，精选高质量信息
+聚焦AI行业大事件：产品发布、公司动态、重大更新
 """
 
 import json
 import os
-from datetime import datetime
-from typing import List, Dict
-from dataclasses import dataclass
 import re
+from datetime import datetime, timedelta
+from typing import List, Dict, Optional
+from dataclasses import dataclass, asdict
 
 
 @dataclass
@@ -19,47 +19,69 @@ class DigestItem:
     summary: str
     importance: int  # 1-10
     category: str
-    sources: List[Dict]  # 多个信息源
+    sources: List[Dict]
     tags: List[str]
     related_urls: List[str]
-    image_url: str = None
+    event_type: str  # 事件类型：产品发布/公司动态/重大更新/开源发布
 
 
 class ContentAnalyzer:
-    """内容分析器"""
+    """内容分析器 - 专注AI大事件"""
     
-    # 关键词权重
-    KEYWORD_WEIGHTS = {
-        'breakthrough': 2,
-        '开源': 1.5,
-        'open source': 1.5,
-        'release': 1.3,
-        '发布': 1.3,
-        'model': 1.2,
-        '模型': 1.2,
-        'paper': 1.1,
-        '论文': 1.1,
-        'benchmark': 1.2,
-        'sota': 1.5,
-        'state of the art': 1.5,
-        'gpt': 1.3,
-        'llm': 1.3,
-        '大模型': 1.3,
-        'agent': 1.2,
-        '智能体': 1.2,
-        'multimodal': 1.3,
-        '多模态': 1.3,
-        'reasoning': 1.2,
-        '推理': 1.2,
+    # 事件类型权重
+    EVENT_WEIGHTS = {
+        '产品发布': 3.0,
+        '重大更新': 2.5,
+        '公司动态': 2.0,
+        '开源发布': 2.0,
+        '合作投资': 1.8,
+        '行业新闻': 1.5,
     }
+    
+    # 关键词权重 - 大事件相关
+    KEYWORD_WEIGHTS = {
+        # 产品动作
+        'launch': 2.5, 'release': 2.5, 'announce': 2.0, 'introduce': 2.0,
+        'unveil': 2.0, 'debut': 2.0, ' rollout': 2.0,
+        '发布': 2.5, '推出': 2.5, '上线': 2.5, '更新': 1.5, '新版本': 2.0,
+        'available now': 2.0, 'now live': 2.0, 'coming soon': 1.5,
+        
+        # 公司动态
+        'acquisition': 2.0, 'merge': 2.0, 'partnership': 1.8,
+        'funding': 1.8, 'investment': 1.8, 'ipo': 2.5,
+        '收购': 2.0, '合并': 2.0, '融资': 1.8, '投资': 1.5, '上市': 2.5,
+        '合作': 1.5, '战略': 1.5,
+        
+        # 开源
+        'open source': 2.0, '开源': 2.0, 'github': 1.5,
+        'free': 1.5, 'public': 1.5,
+        
+        # 重要产品
+        'gpt-4': 2.0, 'gpt-5': 3.0, 'gpt-6': 3.0, 'chatgpt': 2.0,
+        'claude': 2.0, 'gemini': 2.0, 'copilot': 2.0, 'llama': 2.0,
+        'o1': 2.5, 'o3': 2.5, 'sonnet': 2.0, 'opus': 2.0,
+        'stable diffusion': 1.8, 'midjourney': 1.8, 'dall-e': 1.8,
+        
+        # 重大特性
+        'multimodal': 1.8, 'agent': 1.8, 'api': 1.5,
+        '多模态': 1.8, '智能体': 1.8,
+    }
+    
+    # 排除关键词 - 学术论文
+    EXCLUDE_KEYWORDS = [
+        'arxiv', 'paper', 'research paper', 'journal', 'conference',
+        'study', 'experiment', 'experimental', 'evaluation',
+        'dataset', 'benchmark', 'baseline', 'ablation',
+        'appendix', 'supplementary', 'theorem', 'lemma',
+        'proof', 'corollary', 'hypothesis', 'methodology',
+        '论文', '研究', '实验', '基准测试', '消融实验',
+    ]
     
     # 分类映射
     CATEGORIES = {
-        'research': '🔬 研究进展',
-        'industry': '🏢 行业动态',
-        'tools': '🛠️ 工具资源',
-        'news': '📰 新闻资讯',
-        'tutorial': '📚 教程学习',
+        '行业动态': '🔥 行业动态',
+        '新闻资讯': '📰 新闻资讯',
+        '工具资源': '🛠️ 工具资源',
     }
     
     def __init__(self):
@@ -70,51 +92,80 @@ class ContentAnalyzer:
         """分析并精选资讯"""
         print(f"Analyzing {len(items)} items...")
         
-        # 1. 计算重要性分数
+        # 1. 过滤掉学术论文
+        filtered_items = self._filter_academic_papers(items)
+        print(f"  Filtered to {len(filtered_items)} non-academic items")
+        
+        # 2. 计算重要性分数
         scored_items = []
-        for item in items:
-            score = self._calculate_importance(item)
+        for item in filtered_items:
+            score, event_type = self._calculate_importance(item)
+            item['event_type'] = event_type
             scored_items.append((item, score))
         
-        # 2. 按分数排序
+        # 3. 按分数排序
         scored_items.sort(key=lambda x: x[1], reverse=True)
         
-        # 3. 合并相似内容（多源验证）
+        # 4. 合并相似内容
         merged = self._merge_similar(scored_items)
         
-        # 4. 精选top items
+        # 5. 精选top items
         selected = merged[:self.max_items]
         
-        # 5. 如果不够最少数量，放宽条件
+        # 6. 如果不够最少数量，提示
         if len(selected) < self.min_items:
-            print(f"Warning: Only {len(selected)} items selected, minimum is {self.min_items}")
+            print(f"  Warning: Only {len(selected)} items selected, minimum is {self.min_items}")
         
-        # 6. 转换为DigestItem
+        # 7. 转换为DigestItem
         digest_items = []
         for item_data, score in selected:
             digest_item = self._create_digest_item(item_data, score)
             digest_items.append(digest_item)
         
-        print(f"Selected {len(digest_items)} items for digest")
+        print(f"  Selected {len(digest_items)} items for digest")
         return digest_items
     
-    def _calculate_importance(self, item: Dict) -> float:
-        """计算内容重要性分数"""
+    def _filter_academic_papers(self, items: List[Dict]) -> List[Dict]:
+        """过滤掉学术论文"""
+        filtered = []
+        for item in items:
+            text = f"{item.get('title', '')} {item.get('summary', '')}".lower()
+            
+            # 检查是否包含排除关键词
+            is_academic = any(kw.lower() in text for kw in self.EXCLUDE_KEYWORDS)
+            
+            # 检查是否来自学术源
+            source = item.get('source', '').lower()
+            is_arxiv = 'arxiv' in source or 'arxiv' in text
+            
+            if not is_academic and not is_arxiv:
+                filtered.append(item)
+        
+        return filtered
+    
+    def _calculate_importance(self, item: Dict) -> tuple:
+        """计算内容重要性分数和事件类型"""
         score = 5.0  # 基础分
         
-        text = f"{item.get('title', '')} {item.get('summary', '')} {item.get('content', '')}"
+        text = f"{item.get('title', '')} {item.get('summary', '')}"
         text_lower = text.lower()
         
         # 关键词加分
         for keyword, weight in self.KEYWORD_WEIGHTS.items():
-            if keyword in text_lower:
+            if keyword.lower() in text_lower:
                 score += weight
         
         # 来源权重
+        source = item.get('source', '')
         source_weight = item.get('weight', 1.0)
         score *= source_weight
         
-        # 时效性加分（越新分越高）
+        # 判断事件类型
+        event_type = self._detect_event_type(text_lower)
+        if event_type in self.EVENT_WEIGHTS:
+            score += self.EVENT_WEIGHTS[event_type]
+        
+        # 时效性加分
         try:
             published = datetime.fromisoformat(item.get('published', '').replace('Z', '+00:00'))
             hours_old = (datetime.now() - published).total_seconds() / 3600
@@ -125,10 +176,25 @@ class ContentAnalyzer:
         except:
             pass
         
-        return min(score, 10)  # 最高10分
+        return min(score, 10), event_type
+    
+    def _detect_event_type(self, text: str) -> str:
+        """检测事件类型"""
+        if any(k in text for k in ['launch', 'release', '发布', '推出', '上线', 'available']):
+            return '产品发布'
+        elif any(k in text for k in ['update', 'upgrade', '更新', '新版本', 'improve']):
+            return '重大更新'
+        elif any(k in text for k in ['acquisition', 'merge', 'funding', 'ipo', '收购', '合并', '融资', '上市']):
+            return '公司动态'
+        elif any(k in text for k in ['open source', '开源', 'github']):
+            return '开源发布'
+        elif any(k in text for k in ['partnership', 'collaboration', '合作', '战略']):
+            return '合作投资'
+        else:
+            return '行业新闻'
     
     def _merge_similar(self, scored_items: List[tuple]) -> List[tuple]:
-        """合并相似内容，聚合多源信息"""
+        """合并相似内容"""
         merged = []
         used_indices = set()
         
@@ -136,7 +202,6 @@ class ContentAnalyzer:
             if i in used_indices:
                 continue
             
-            # 寻找相似内容
             similar_items = [item1]
             sources = [{
                 'name': item1.get('source', ''),
@@ -157,34 +222,28 @@ class ContentAnalyzer:
                     })
                     used_indices.add(j)
             
-            # 合并信息
             if len(similar_items) > 1:
                 item1['related_sources'] = sources[1:]
                 item1['sources'] = sources
-                # 多源验证加分
                 score1 += 0.5 * len(similar_items)
             
             merged.append((item1, score1))
             used_indices.add(i)
         
-        # 重新排序
         merged.sort(key=lambda x: x[1], reverse=True)
         return merged
     
     def _is_similar(self, item1: Dict, item2: Dict) -> bool:
         """判断两条内容是否相似"""
-        # 简单的标题相似度检查
         title1 = item1.get('title', '').lower()
-        title2 = item2.get('url', '').lower()
+        title2 = item2.get('title', '').lower()
         
-        # 提取关键词
         words1 = set(re.findall(r'\w+', title1))
         words2 = set(re.findall(r'\w+', title2))
         
         if not words1 or not words2:
             return False
         
-        # Jaccard相似度
         intersection = words1 & words2
         union = words1 | words2
         similarity = len(intersection) / len(union)
@@ -193,24 +252,15 @@ class ContentAnalyzer:
     
     def _create_digest_item(self, item: Dict, score: float) -> DigestItem:
         """创建精选条目"""
-        # 生成摘要
         summary = self._generate_summary(item)
-        
-        # 确定分类
-        category = item.get('category', 'news')
+        category = item.get('category', '新闻资讯')
         category_label = self.CATEGORIES.get(category, '📰 新闻资讯')
+        tags = self._extract_tags(item)
         
-        # 提取标签
-        tags = item.get('tags', [])
-        if not tags:
-            tags = self._extract_tags(item)
-        
-        # 收集相关链接
         related_urls = []
         if item.get('related_sources'):
             related_urls = [s['item_url'] for s in item['related_sources'] if s.get('item_url')]
         
-        # 主信息源
         sources = item.get('sources', [{
             'name': item.get('source', ''),
             'url': item.get('source_url', ''),
@@ -223,20 +273,17 @@ class ContentAnalyzer:
             importance=int(score),
             category=category_label,
             sources=sources,
-            tags=tags[:5],  # 最多5个标签
-            related_urls=related_urls
+            tags=tags[:5],
+            related_urls=related_urls,
+            event_type=item.get('event_type', '行业新闻')
         )
     
     def _generate_summary(self, item: Dict) -> str:
         """生成精炼摘要"""
         content = item.get('content', '') or item.get('summary', '')
-        
-        # 清理HTML标签
         content = re.sub(r'<[^>]+>', '', content)
         
-        # 限制长度
         if len(content) > 300:
-            # 找句子边界
             sentences = re.split(r'(?<=[.!?。！？])\s+', content)
             summary = ''
             for sent in sentences:
@@ -249,18 +296,21 @@ class ContentAnalyzer:
         return content[:300]
     
     def _extract_tags(self, item: Dict) -> List[str]:
-        """从内容中提取标签"""
+        """提取标签"""
         text = f"{item.get('title', '')} {item.get('summary', '')}"
         text_lower = text.lower()
         
         tags = []
         tag_keywords = {
-            'LLM': ['llm', '大模型', 'language model', 'gpt', 'claude'],
-            'Vision': ['vision', 'image', 'multimodal', '视觉', '图像'],
-            'Agent': ['agent', '智能体', 'autonomous'],
-            'Research': ['paper', '论文', 'research', 'study'],
-            'Open Source': ['open source', 'github', '开源'],
-            'Product': ['launch', 'release', '发布', '产品'],
+            'OpenAI': ['openai', 'chatgpt', 'gpt-4', 'gpt-5'],
+            'Anthropic': ['anthropic', 'claude'],
+            'Google': ['google', 'gemini', 'bard'],
+            'Microsoft': ['microsoft', 'copilot', 'azure'],
+            'Meta': ['meta', 'llama', 'facebook'],
+            '产品发布': ['launch', 'release', '发布', '推出'],
+            '开源': ['open source', 'github', '开源'],
+            '多模态': ['multimodal', '多模态', 'vision', 'image'],
+            '智能体': ['agent', '智能体'],
         }
         
         for tag, keywords in tag_keywords.items():
@@ -271,14 +321,12 @@ class ContentAnalyzer:
 
 
 if __name__ == '__main__':
-    # 测试
-    with open('data/raw_news.json', 'r', encoding='utf-8') as f:
+    with open('../data/raw_news.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     analyzer = ContentAnalyzer()
     digest_items = analyzer.analyze(data['items'])
     
-    # 保存分析结果
     output = {
         'generated_at': datetime.now().isoformat(),
         'items': [
@@ -289,13 +337,14 @@ if __name__ == '__main__':
                 'category': item.category,
                 'sources': item.sources,
                 'tags': item.tags,
-                'related_urls': item.related_urls
+                'related_urls': item.related_urls,
+                'event_type': item.event_type
             }
             for item in digest_items
         ]
     }
     
-    with open('data/digest.json', 'w', encoding='utf-8') as f:
+    with open('../data/digest.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     
     print(f"\nSaved to data/digest.json")

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-AI Daily Digest - 智能中文内容生成器
-使用规则+AI方式生成高质量中文内容
+AI Daily Digest - 中文内容生成器
+针对AI行业大事件优化
 """
 
 import json
@@ -12,148 +12,147 @@ from pathlib import Path
 
 
 class ChineseContentGenerator:
-    """中文内容生成器"""
+    """中文内容生成器 - 专注AI大事件"""
     
     # 分类中文映射
     CATEGORY_MAP = {
-        '🔬 研究进展': '研究进展',
-        '🏢 行业动态': '行业动态',
-        '🛠️ 工具资源': '工具资源',
+        '🔥 行业动态': '行业动态',
         '📰 新闻资讯': '新闻资讯',
-        '📚 教程学习': '教程学习',
+        '🛠️ 工具资源': '工具资源',
     }
     
-    # 标签中文映射
-    TAG_MAP = {
-        'LLM': '大语言模型',
-        'Agent': '智能体',
-        'Research': '研究',
-        'Vision': '视觉',
-        'Multimodal': '多模态',
-        'Open Source': '开源',
-        'Product': '产品',
+    # 事件类型映射
+    EVENT_TYPE_MAP = {
+        '产品发布': '🚀 产品发布',
+        '重大更新': '⚡ 重大更新',
+        '公司动态': '🏢 公司动态',
+        '开源发布': '🔓 开源发布',
+        '合作投资': '🤝 合作投资',
+        '行业新闻': '📰 行业新闻',
     }
     
-    def __init__(self):
-        pass
+    # 公司/产品名称映射
+    COMPANY_MAP = {
+        'openai': 'OpenAI',
+        'anthropic': 'Anthropic',
+        'google': 'Google',
+        'deepmind': 'DeepMind',
+        'microsoft': '微软',
+        'meta': 'Meta',
+        'facebook': 'Meta',
+        'nvidia': 'NVIDIA',
+        'stability': 'Stability AI',
+        'huggingface': 'Hugging Face',
+        'github': 'GitHub',
+        'amazon': '亚马逊',
+        'apple': '苹果',
+        'xai': 'xAI',
+        'grok': 'Grok',
+    }
     
-    def translate_and_summarize(self, title: str, summary: str) -> tuple:
-        """
-        生成精炼的中文标题和摘要
-        策略：提取核心概念，用中文重新组织表达
-        """
-        # 清理文本
+    # 产品名称映射
+    PRODUCT_MAP = {
+        'chatgpt': 'ChatGPT',
+        'gpt-4': 'GPT-4',
+        'gpt-5': 'GPT-5',
+        'gpt-4o': 'GPT-4o',
+        'o1': 'o1',
+        'o3': 'o3',
+        'claude': 'Claude',
+        'gemini': 'Gemini',
+        'bard': 'Bard',
+        'copilot': 'Copilot',
+        'llama': 'Llama',
+        'stable diffusion': 'Stable Diffusion',
+        'midjourney': 'Midjourney',
+        'dall-e': 'DALL-E',
+        'whisper': 'Whisper',
+        'embedding': 'Embedding',
+    }
+    
+    def translate_and_summarize(self, title: str, summary: str, event_type: str = '行业新闻') -> tuple:
+        """生成精炼的中文标题和摘要"""
         title = self._clean_text(title)
         summary = self._clean_text(summary)
         
-        # 提取关键概念
-        concepts = self._extract_concepts(title, summary)
+        # 提取公司和产品信息
+        companies = self._extract_companies(title + ' ' + summary)
+        products = self._extract_products(title + ' ' + summary)
         
         # 生成中文标题
-        cn_title = self._generate_title(title, concepts)
+        cn_title = self._generate_title(title, companies, products, event_type)
         
         # 生成中文摘要
-        cn_summary = self._generate_summary(summary, concepts)
+        cn_summary = self._generate_summary(summary, companies, products, event_type)
         
         return cn_title, cn_summary
     
     def _clean_text(self, text: str) -> str:
         """清理文本"""
-        # 移除arXiv标记
-        text = re.sub(r'arXiv:\d+\.\d+v\d+', '', text)
-        text = re.sub(r'Announce Type:\s*\w+', '', text)
-        text = re.sub(r'Abstract:\s*', '', text)
-        # 清理多余空格
+        text = re.sub(r'<[^>]+>', '', text)
         text = ' '.join(text.split())
         return text.strip()
     
-    def _extract_concepts(self, title: str, summary: str) -> dict:
-        """提取关键概念"""
-        text = (title + ' ' + summary).lower()
-        
-        concepts = {
-            'has_agent': 'agent' in text or 'multi-agent' in text,
-            'has_llm': 'llm' in text or 'language model' in text,
-            'has_reasoning': 'reasoning' in text or 'thought' in text,
-            'has_learning': 'learning' in text,
-            'has_optimization': 'optimization' in text or 'optimize' in text,
-            'has_generation': 'generation' in text or 'generative' in text,
-            'has_simulation': 'simulation' in text,
-            'has_benchmark': 'benchmark' in text,
-            'has_clinical': 'clinical' in text or 'health' in text,
-            'has_vision': 'vision' in text or 'image' in text,
-            'has_multimodal': 'multimodal' in text,
-            'has_error': 'error' in text or 'forecasting' in text,
-            'has_search': 'search' in text or 'retrieval' in text,
-            'has_compression': 'compression' in text,
-            'has_math': 'mathematics' in text or 'math' in text,
-            'has_detection': 'detection' in text,
-        }
-        
-        return concepts
+    def _extract_companies(self, text: str) -> list:
+        """提取公司名称"""
+        text_lower = text.lower()
+        companies = []
+        for key, name in self.COMPANY_MAP.items():
+            if key in text_lower:
+                companies.append(name)
+        return list(dict.fromkeys(companies))  # 去重
     
-    def _generate_title(self, title: str, concepts: dict) -> str:
+    def _extract_products(self, text: str) -> list:
+        """提取产品名称"""
+        text_lower = text.lower()
+        products = []
+        for key, name in self.PRODUCT_MAP.items():
+            if key in text_lower:
+                products.append(name)
+        return list(dict.fromkeys(products))
+    
+    def _generate_title(self, title: str, companies: list, products: list, event_type: str) -> str:
         """生成中文标题"""
-        # 移除冒号前的作者名
+        # 移除常见的英文前缀
+        title = re.sub(r'^(Introducing|Announcing|Launching|Meet)\s+', '', title, flags=re.IGNORECASE)
+        
+        # 提取核心内容
         if ':' in title:
             parts = title.split(':', 1)
-            if len(parts[0]) < 25:
+            if len(parts[0]) < 30:
                 title = parts[1].strip()
         
-        # 核心术语翻译映射
+        # 翻译常见动词和名词
         translations = {
-            r'\bagentic\b': '智能体化',
-            r'\bagents?\b': '智能体',
-            r'\bmulti-agent\b': '多智能体',
-            r'\bllm\b': '大模型',
-            r'\blarge language model\b': '大语言模型',
-            r'\btree of thought\b': '思维树',
-            r'\btot\b': '思维树',
-            r'\bsimulation\b': '仿真',
-            r'\bgeneration\b': '生成',
-            r'\bgenerative\b': '生成式',
-            r'\boptimization\b': '优化',
-            r'\breasoning\b': '推理',
-            r'\blearning\b': '学习',
-            r'\bcontrastive\b': '对比',
-            r'\bdetection\b': '检测',
-            r'\bforecasting\b': '预测',
-            r'\bbenchmark\b': '基准测试',
-            r'\bself-evolving\b': '自进化',
-            r'\bembodied\b': '具身',
-            r'\bintrospection\b': '内省',
-            r'\bcompression\b': '压缩',
-            r'\bmathematics?\b': '数学',
-            r'\bclinical\b': '临床',
-            r'\bhealth\b': '健康',
-            r'\bdata extraction\b': '数据提取',
-            r'\berror\b': '错误',
-            r'\bmarkov\b': '马尔可夫',
-            r'\bdecomposition\b': '分解',
-            r'\brefinement\b': '优化',
-            r'\bvia\b': '通过',
-            r'\bwith\b': '使用',
-            r'\bfor\b': '用于',
-            r'\busing\b': '使用',
-            r'\band\b': '与',
-            r'\bof\b': '',
-            r'\bthe\b': '',
-            r'\ba\b': '',
-            r'\ban\b': '',
-            r'\bin\b': '在',
-            r'\bon\b': '在',
+            r'\blaunch\b': '发布',
+            r'\brelease\b': '发布',
+            r'\bannounce\b': '宣布',
+            r'\bintroduce\b': '推出',
+            r'\bunveil\b': ' unveiled',
+            r'\bupdate\b': '更新',
+            r'\bupgrade\b': '升级',
+            r'\bnew\b': '新',
+            r'\bnow available\b': '现已上线',
+            r'\bcoming soon\b': '即将推出',
         }
         
         cn_title = title
         for pattern, replacement in translations.items():
             cn_title = re.sub(pattern, replacement, cn_title, flags=re.IGNORECASE)
         
-        # 清理多余空格
-        cn_title = ' '.join(cn_title.split())
-        
-        # 如果结果还是太英文化，基于概念生成标题
-        if self._is_mostly_english(cn_title):
-            cn_title = self._generate_concept_title(concepts, title)
+        # 如果公司有产品，构建"公司+产品+动作"格式
+        if companies and products:
+            company = companies[0]
+            product = products[0]
+            # 尝试提取动作
+            action = self._extract_action(cn_title)
+            if action:
+                cn_title = f"{company}{product}{action}"
+            else:
+                cn_title = f"{company}发布{product}新功能"
+        elif companies:
+            company = companies[0]
+            cn_title = f"{company}：{cn_title}"
         
         # 限制长度
         if len(cn_title) > 60:
@@ -161,124 +160,98 @@ class ChineseContentGenerator:
         
         return cn_title.strip()
     
-    def _generate_concept_title(self, concepts: dict, original_title: str) -> str:
-        """基于概念生成中文标题"""
-        parts = []
-        
-        # 根据概念组合标题
-        if concepts['has_agent']:
-            if concepts['has_simulation']:
-                parts.append('智能体仿真')
-            elif concepts['has_error']:
-                parts.append('多智能体错误预测')
-            else:
-                parts.append('智能体系统')
-        
-        if concepts['has_reasoning']:
-            parts.append('推理优化')
-        
-        if concepts['has_learning']:
-            if concepts['has_contrastive']:
-                parts.append('对比学习')
-            else:
-                parts.append('学习方法')
-        
-        if concepts['has_optimization']:
-            parts.append('优化技术')
-        
-        if concepts['has_clinical']:
-            parts.append('临床数据')
-        
-        if concepts['has_compression']:
-            parts.append('压缩技术')
-        
-        if concepts['has_math']:
-            parts.append('数学建模')
-        
-        if not parts:
-            # 提取原标题中的大写缩写作为主题
-            acronyms = re.findall(r'\b[A-Z]{2,}\b', original_title)
-            if acronyms:
-                parts.append(f'{acronyms[0]}技术')
-            else:
-                parts.append('AI前沿研究')
-        
-        return '：'.join(parts[:2]) if len(parts) > 1 else parts[0]
+    def _extract_action(self, text: str) -> str:
+        """提取动作词"""
+        actions = ['发布', '推出', '上线', '更新', '升级', '宣布', '开源']
+        for action in actions:
+            if action in text:
+                return action
+        return ''
     
-    def _generate_summary(self, summary: str, concepts: dict) -> str:
+    def _generate_summary(self, summary: str, companies: list, products: list, event_type: str) -> str:
         """生成中文摘要"""
-        # 提取核心句子
+        # 提取第一句
         sentences = re.split(r'(?<=[.!?。！？])\s+', summary)
         core = sentences[0] if sentences else summary
         
-        # 基于概念生成精炼摘要
-        if concepts['has_agent'] and concepts['has_simulation']:
-            return "本文提出了一种智能体仿真生成方法，通过分解复杂决策过程，实现了从自然语言描述到可执行仿真的自动转换。"
+        # 限制长度
+        if len(core) > 200:
+            core = core[:197] + '...'
         
-        if concepts['has_reasoning'] and concepts['has_optimization']:
-            return "针对复杂推理任务，本文优化了思维树框架，在探索深度与计算效率之间取得更好平衡。"
+        # 根据事件类型生成摘要模板
+        if event_type == '产品发布':
+            if companies and products:
+                return f"{companies[0]}正式发布了{products[0]}，{self._extract_key_point(core)}"
+            elif companies:
+                return f"{companies[0]}发布了新产品，{self._extract_key_point(core)}"
         
-        if concepts['has_clinical']:
-            return "本文研究了从临床病历中提取结构化信息的方法，通过深度推理处理变量间的复杂依赖关系。"
+        elif event_type == '重大更新':
+            if companies and products:
+                return f"{companies[0]}对{products[0]}进行了重大更新，{self._extract_key_point(core)}"
+            elif companies:
+                return f"{companies[0]}推出重要更新，{self._extract_key_point(core)}"
         
-        if concepts['has_learning'] and concepts['has_detection']:
-            return "本文提出了增强的对比学习方法，用于检测文本属性图上的分布外样本，提升了模型的泛化能力。"
+        elif event_type == '公司动态':
+            if companies:
+                return f"{companies[0]}传来新动态，{self._extract_key_point(core)}"
         
-        if concepts['has_agent'] and concepts['has_error']:
-            return "本文提出了多智能体系统的主动错误预测方法，利用马尔可夫转移动力学提前识别潜在故障。"
-        
-        if concepts['has_optimization'] and concepts['has_search']:
-            return "本文针对生成式搜索引擎，提出了自进化的智能体优化系统，实现了从排名导向到内容生成的转变。"
-        
-        if concepts['has_benchmark']:
-            return "本文构建了具身智能协作通信的基准测试，评估了在延迟、丢包等真实网络条件下的系统性能。"
-        
-        if concepts['has_compression'] and concepts['has_math']:
-            return "本文探索了通过压缩原理进行数学建模的新范式，揭示了人类数学发现与形式化数学之间的关系。"
-        
-        if 'vector' in summary.lower():
-            return "本文探讨了AI应用中的完整数据层架构，超越传统的向量存储方案，提供了更全面的数据管理视角。"
-        
-        if concepts['has_llm']:
-            return "本文研究了大语言模型的新能力与应用，为AI技术发展提供了有价值的见解。"
+        elif event_type == '开源发布':
+            if companies:
+                return f"{companies[0]}开源了新项目，{self._extract_key_point(core)}"
+            else:
+                return f"新的开源项目发布，{self._extract_key_point(core)}"
         
         # 默认摘要
-        return "本文探讨了人工智能领域的最新研究进展，提出了创新性的方法与技术。"
+        if companies:
+            return f"{companies[0]}最新消息：{self._extract_key_point(core)}"
+        
+        return self._extract_key_point(core)
     
-    def _is_mostly_english(self, text: str) -> bool:
-        """检查文本是否主要是英文"""
-        english_chars = len(re.findall(r'[a-zA-Z]{3,}', text))  # 至少3个字母的单词
-        total_chars = len(text.replace(' ', '').replace('：', ''))
-        if total_chars == 0:
-            return True
-        return english_chars / total_chars > 0.3
+    def _extract_key_point(self, text: str) -> str:
+        """提取核心要点"""
+        # 简化处理，返回精炼版本
+        text = re.sub(r'^\s*([Tt]he|[Aa]|[Aa]n)\s+', '', text)
+        text = re.sub(r'\s+', ' ', text)
+        
+        # 限制长度
+        if len(text) > 120:
+            text = text[:117] + '...'
+        
+        return text.strip()
     
     def get_category_label(self, category: str) -> str:
         """获取分类中文标签"""
         return self.CATEGORY_MAP.get(category, category)
     
+    def get_event_type_label(self, event_type: str) -> str:
+        """获取事件类型标签"""
+        return self.EVENT_TYPE_MAP.get(event_type, event_type)
+    
     def get_tag_label(self, tag: str) -> str:
         """获取标签中文标签"""
-        return self.TAG_MAP.get(tag, tag)
+        return tag  # 保持原样
 
 
 if __name__ == '__main__':
-    # 测试
     generator = ChineseContentGenerator()
     
     test_cases = [
         {
-            'title': 'FactorSmith: Agentic Simulation Generation via Markov Decision Process Decomposition',
-            'summary': 'Generating executable simulations from natural language specifications remains a challenging problem due to the limited reasoning capacity of large language models.'
+            'title': 'OpenAI launches GPT-4 Turbo with vision capabilities',
+            'summary': 'OpenAI announced the launch of GPT-4 Turbo, a new version of their flagship model that includes vision capabilities and improved performance.',
+            'event_type': '产品发布'
         },
         {
-            'title': 'Domain-Specialized Tree of Thought through Plug-and-Play Predictors',
-            'summary': 'While Large Language Models have advanced complex reasoning, prominent methods like the Tree of Thoughts framework face a critical trade-off.'
+            'title': 'Anthropic raises $750M in new funding round',
+            'summary': 'Anthropic has secured $750 million in additional funding, bringing the company\'s valuation to $18.4 billion.',
+            'event_type': '公司动态'
         }
     ]
     
     for case in test_cases:
-        cn_title, cn_summary = generator.translate_and_summarize(case['title'], case['summary'])
+        cn_title, cn_summary = generator.translate_and_summarize(
+            case['title'], case['summary'], case['event_type']
+        )
         print(f"原标题: {case['title']}")
         print(f"中文标题: {cn_title}")
         print(f"中文摘要: {cn_summary}")

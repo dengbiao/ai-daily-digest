@@ -56,7 +56,8 @@ class JekyllGenerator:
             '---',
             '',
             '<div class="daily-intro">',
-            f'  <p class="text-lg text-gray-300 mb-4">📰 今日精选 <strong class="text-blue-400">{len(items)}</strong> 条AI领域高质量资讯</p>',
+            f'  <p class="text-lg text-gray-300 mb-2">🔥 今日AI圈 <strong class="text-blue-400">{len(items)}</strong> 件大事</p>',
+            '  <p class="text-sm text-gray-500">聚焦产品发布、公司动态、行业突破</p>',
             '</div>',
             '',
             '---',
@@ -73,7 +74,7 @@ class JekyllGenerator:
             '---',
             '',
             '<div class="text-center text-gray-500 text-sm mt-8">',
-            f'  <p>🤖 AI Daily Digest · 每日自动更新</p>',
+            f'  <p>🤖 AI Daily Digest · 每日追踪AI大事件</p>',
             f'  <p class="mt-1">生成时间: {datetime.now().strftime("%H:%M")}</p>',
             '</div>',
         ])
@@ -83,15 +84,17 @@ class JekyllGenerator:
     def _generate_news_section(self, item: dict, index: int) -> list:
         """生成单条新闻的 Markdown"""
         # 翻译标题和摘要
+        event_type = item.get('event_type', '行业新闻')
         cn_title, cn_summary = self.cn_generator.translate_and_summarize(
             item['title'], 
-            item['summary']
+            item['summary'],
+            event_type
         )
         
-        # 分类和标签
-        category = self.cn_generator.get_category_label(item['category'])
+        # 事件类型和分类
+        event_label = self.cn_generator.get_event_type_label(event_type)
         importance = item['importance']
-        stars = '⭐' * (importance // 2)
+        stars = '🔥' * (importance // 2)
         
         lines = [
             '',
@@ -100,13 +103,13 @@ class JekyllGenerator:
             f'## <span class="text-blue-400">{index}.</span> {cn_title}',
             '',
             f'<div class="flex flex-wrap items-center gap-3 mb-4 text-sm">',
-            f'  <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">{category}</span>',
-            f'  <span class="text-yellow-400">{stars}</span>',
-            f'  <span class="text-gray-500">重要度 {importance}/10</span>',
+            f'  <span class="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 rounded-full font-medium">{event_label}</span>',
+            f'  <span class="text-orange-400">{stars}</span>',
+            f'  <span class="text-gray-500">热度 {importance}/10</span>',
             f'</div>',
             '',
             f'<div class="prose prose-invert max-w-none">',
-            f'  <p class="text-gray-300 leading-relaxed">{cn_summary}</p>',
+            f'  <p class="text-gray-300 leading-relaxed text-base">{cn_summary}</p>',
             f'</div>',
             '',
         ]
@@ -118,17 +121,19 @@ class JekyllGenerator:
             lines.append('  <p class="text-sm text-gray-500 mb-2">📎 信息来源：</p>')
             lines.append('  <div class="flex flex-wrap gap-2">')
             for source in sources:
-                lines.append(f'    <a href="{source["item_url"]}" target="_blank" rel="noopener" class="px-3 py-1 bg-dark-bg border border-dark-border rounded-lg text-sm text-gray-400 hover:text-blue-400 hover:border-blue-500/50 transition">{source["name"]}</a>')
+                lines.append(f'    <a href="{source["item_url"]}" target="_blank" rel="noopener" class="px-3 py-1.5 bg-dark-bg border border-dark-border rounded-lg text-sm text-gray-400 hover:text-blue-400 hover:border-blue-500/50 transition flex items-center gap-1">')
+                lines.append(f'      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>')
+                lines.append(f'      {source["name"]}')
+                lines.append(f'    </a>')
             lines.append('  </div>')
             lines.append('</div>')
         
         # 标签
         tags = item.get('tags', [])
         if tags:
-            cn_tags = [self.cn_generator.get_tag_label(tag) for tag in tags]
             lines.append('<div class="mt-4 flex flex-wrap gap-2">')
-            for tag in cn_tags:
-                lines.append(f'  <span class="px-2 py-0.5 bg-gray-800 text-gray-400 text-xs rounded">{tag}</span>')
+            for tag in tags[:4]:  # 最多4个标签
+                lines.append(f'  <span class="px-2.5 py-1 bg-gray-800/80 text-gray-400 text-xs rounded-md border border-gray-700">{tag}</span>')
             lines.append('</div>')
         
         lines.append('')
@@ -139,7 +144,6 @@ class JekyllGenerator:
 
 
 if __name__ == '__main__':
-    # 测试
     with open('../data/digest.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
     
