@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Daily Digest 历史归档">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🤖 AI Daily Digest</h1>
+            <p class="subtitle">历史归档</p>
+            <p class="date">{{ date | format_date }}</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <a href="../index.html">今日</a>
+            <a href="index.html" class="active">归档</a>
+            <a href="https://github.com/dengbiao/ai-daily-digest" target="_blank">GitHub</a>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container">
+            {% if categories %}
+                {% for category, items in categories.items() %}
+                <section class="category-section">
+                    <h3>{{ category }} ({{ items | length }})</h3>
+                    <div class="news-grid">
+                        {% for item in items %}
+                        <article class="news-item">
+                            <h2>
+                                <a href="{{ item.sources[0].item_url }}" target="_blank" rel="noopener">
+                                    {{ item.title }}
+                                </a>
+                            </h2>
+                            <p class="summary">{{ item.summary[:200] }}...</p>
+                            <div class="meta">
+                                <div class="sources">
+                                    {% for source in item.sources %}
+                                    <a href="{{ source.item_url }}" class="source-tag" target="_blank">
+                                        {{ source.name }}
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </article>
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endfor %}
+            {% else %}
+            <div class="empty-state">
+                <p>暂无归档内容</p>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>AI Daily Digest · 每日自动更新</p>
+            <p><a href="https://github.com/dengbiao/ai-daily-digest" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+    
+    <script src="../assets/app.js"></script>
+</body>
+</html>

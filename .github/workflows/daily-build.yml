@@ -1,0 +1,46 @@
+# GitHub Actions workflow for AI Daily Digest
+# 每天UTC 00:00 (北京时间08:00)自动运行
+
+name: Daily Build
+
+on:
+  schedule:
+    # 每天UTC 00:00运行 (北京时间08:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Run daily build
+      run: |
+        python scripts/daily_build.py
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
+        publish_branch: gh-pages
+        commit_message: "Update: ${{ github.event.schedule || 'manual build' }}"
+    
+    - name: Send notification
+      if: success()
+      run: |
+        echo "Build completed successfully"
+        # 这里可以添加更多通知方式

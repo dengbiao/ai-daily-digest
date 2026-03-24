@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="每日AI精选资讯，汇聚全球人工智能领域最新动态">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🤖 AI Daily Digest</h1>
+            <p class="subtitle">每日AI精选资讯</p>
+            <p class="date">{{ date | format_date }} · 共 {{ items | length }} 条</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <a href="index.html" class="active">今日</a>
+            <a href="archive/index.html">归档</a>
+            <a href="https://github.com/dengbiao/ai-daily-digest" target="_blank">GitHub</a>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container">
+            {% if items %}
+            <div class="news-grid">
+                {% for item in items %}
+                <article class="news-item">
+                    <span class="category">{{ item.category }}</span>
+                    
+                    <h2>
+                        <a href="{{ item.sources[0].item_url }}" target="_blank" rel="noopener">
+                            {{ item.title }}
+                        </a>
+                    </h2>
+                    
+                    <p class="summary">{{ item.summary }}</p>
+                    
+                    <div class="meta">
+                        <div class="sources">
+                            {% for source in item.sources %}
+                            <a href="{{ source.item_url }}" class="source-tag" target="_blank" rel="noopener">
+                                {{ source.name }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                        
+                        {% if item.related_urls %}
+                        <span>+{{ item.related_urls | length }} 相关来源</span>
+                        {% endif %}
+                        
+                        <span class="importance" title="重要度: {{ item.importance }}/10">
+                            <span>重要度</span>
+                            <span class="importance-bar">
+                                <span class="importance-fill" style="width: {{ item.importance * 10 }}%"></span>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    {% if item.tags %}
+                    <div class="tags">
+                        {% for tag in item.tags %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+                <p>今日暂无资讯</p>
+                <p>请稍后再来查看</p>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>AI Daily Digest · 每日自动更新</p>
+            <p>生成时间: {{ generated_at | format_time }}</p>
+            <p>
+                <a href="https://github.com/dengbiao/ai-daily-digest" target="_blank">GitHub</a> ·
+                <a href="feed.xml" target="_blank">RSS</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="assets/app.js"></script>
+</body>
+</html>

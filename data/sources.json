@@ -1,0 +1,116 @@
+{
+  "sources": [
+    {
+      "id": "huggingface-blog",
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog",
+      "type": "rss",
+      "rss_url": "https://huggingface.co/blog/feed.xml",
+      "category": "research",
+      "weight": 1.0
+    },
+    {
+      "id": "openai-blog",
+      "name": "OpenAI News",
+      "url": "https://openai.com/news",
+      "type": "rss",
+      "rss_url": "https://openai.com/news/rss.xml",
+      "category": "industry",
+      "weight": 1.0
+    },
+    {
+      "id": "anthropic-blog",
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news",
+      "type": "rss",
+      "rss_url": "https://www.anthropic.com/news/rss.xml",
+      "category": "industry",
+      "weight": 1.0
+    },
+    {
+      "id": "google-ai-blog",
+      "name": "Google AI Blog",
+      "url": "https://ai.googleblog.com",
+      "type": "rss",
+      "rss_url": "https://ai.googleblog.com/feeds/posts/default",
+      "category": "research",
+      "weight": 0.9
+    },
+    {
+      "id": "arxiv-cs-ai",
+      "name": "arXiv CS.AI",
+      "url": "https://arxiv.org/list/cs.AI/recent",
+      "type": "rss",
+      "rss_url": "https://rss.arxiv.org/rss/cs.AI",
+      "category": "research",
+      "weight": 0.8
+    },
+    {
+      "id": "mit-tech-review",
+      "name": "MIT Technology Review - AI",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+      "type": "rss",
+      "rss_url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+      "category": "news",
+      "weight": 0.9
+    },
+    {
+      "id": "venturebeat-ai",
+      "name": "VentureBeat - AI",
+      "url": "https://venturebeat.com/ai/",
+      "type": "rss",
+      "rss_url": "https://venturebeat.com/category/ai/feed/",
+      "category": "news",
+      "weight": 0.7
+    },
+    {
+      "id": "machine-learning-mastery",
+      "name": "Machine Learning Mastery",
+      "url": "https://machinelearningmastery.com",
+      "type": "rss",
+      "rss_url": "https://machinelearningmastery.com/feed/",
+      "category": "tutorial",
+      "weight": 0.6
+    },
+    {
+      "id": "papers-with-code",
+      "name": "Papers With Code",
+      "url": "https://paperswithcode.com",
+      "type": "api",
+      "api_url": "https://paperswithcode.com/api/v1/papers/",
+      "category": "research",
+      "weight": 0.9
+    },
+    {
+      "id": "github-trending-ml",
+      "name": "GitHub Trending - ML",
+      "url": "https://github.com/trending?l=python&since=daily",
+      "type": "scrape",
+      "category": "tools",
+      "weight": 0.7
+    }
+  ],
+  "aggregators": [
+    {
+      "id": "ai-jobs",
+      "name": "AI Jobs Newsletter",
+      "url": "https://aijobs.net/newsletter/",
+      "type": "newsletter",
+      "category": "jobs"
+    },
+    {
+      "id": "import-ai",
+      "name": "Import AI",
+      "url": "https://importai.substack.com",
+      "type": "newsletter",
+      "category": "news"
+    },
+    {
+      "id": "the-batch",
+      "name": "The Batch",
+      "url": "https://www.deeplearning.ai/the-batch/",
+      "type": "newsletter",
+      "category": "news"
+    }
+  ]
+}
