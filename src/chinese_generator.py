@@ -30,7 +30,12 @@ class ChineseContentGenerator:
         self._load_env()
     
     def _load_env(self):
-        """加载环境变量"""
+        """加载环境变量 - 优先使用已存在的环境变量"""
+        # 如果环境变量已存在（如 GitHub Actions），跳过文件加载
+        if os.getenv('MOONSHOT_API_KEY'):
+            return
+        
+        # 本地开发时从 .env 文件加载
         env_file = Path(__file__).parent.parent / '.env'
         if env_file.exists():
             with open(env_file, 'r', encoding='utf-8') as f:
@@ -38,7 +43,9 @@ class ChineseContentGenerator:
                     line = line.strip()
                     if line and not line.startswith('#') and '=' in line:
                         key, value = line.split('=', 1)
-                        os.environ[key] = value
+                        # 只在环境变量不存在时才设置
+                        if not os.getenv(key):
+                            os.environ[key] = value
     
     def _load_cache(self):
         """加载翻译缓存"""
