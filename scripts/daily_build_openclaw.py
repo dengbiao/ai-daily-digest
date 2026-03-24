@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-AI Daily Digest - 每日构建入口
-协调抓取、分析、翻译、生成全流程
+AI Daily Digest - 每日构建入口（OpenClaw 集成版）
+协调抓取、分析、生成全流程，使用 OpenClaw 大模型翻译
 """
 
 import sys
 import json
+import subprocess
 from datetime import datetime
 from pathlib import Path
 
@@ -15,13 +16,71 @@ sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 from fetcher import NewsFetcher
 from analyzer import ContentAnalyzer
 from jekyll_generator import JekyllGenerator
-from chinese_generator import batch_translate
+from openclaw_translator import OpenClawTranslator
+
+
+def translate_with_openclaw(items: list) -> list:
+    """使用 OpenClaw 大模型翻译"""
+    print("\n【翻译】使用 OpenClaw 大模型翻译内容...")
+    
+    translator = OpenClawTranslator()
+    items = translator.translate_batch(items)
+    
+    # 检查哪些需要翻译
+    need_translation = [item for item in items if '_translation_prompt' in item]
+    
+    if not need_translation:
+        print("  ✓ 所有内容已从缓存加载")
+        return items
+    
+    print(f"  需要翻译: {len(need_translation)} 条")
+    
+    # 使用 OpenClaw 进行翻译
+    for i, item in enumerate(need_translation, 1):
+        print(f"  翻译 [{i}/{len(need_translation)}]: {item['title'][:40]}...")
+        
+        prompt = item['_translation_prompt']
+        
+        # 调用 OpenClaw 进行翻译
+        try:
+            # 使用 openclaw 命令行工具
+            result = subprocess.run(
+                ['openclaw', 'ask', prompt],
+                capture_output=True,
+                text=True,
+                timeout=60
+            )
+            
+            if result.returncode == 0:
+                translated = result.stdout.strip()
+                translator.apply_translation(item, translated)
+                print(f"    ✓ 翻译完成")
+            else:
+                print(f"    ✗ 翻译失败，使用备用方案")
+                # 使用备用翻译
+                from chinese_generator import ChineseContentGenerator
+                cg = ChineseContentGenerator()
+                item['cn_title'], item['cn_summary'] = cg._smart_translate(
+                    item['title'], item['summary']
+                )
+                
+        except Exception as e:
+            print(f"    ✗ 翻译出错: {e}")
+            # 使用备用翻译
+            from chinese_generator import ChineseContentGenerator
+            cg = ChineseContentGenerator()
+            item['cn_title'], item['cn_summary'] = cg._smart_translate(
+                item['title'], item['summary']
+            )
+    
+    print(f"  ✓ 翻译完成")
+    return items
 
 
 def main():
     """主流程"""
     print("=" * 50)
-    print("AI Daily Digest - 每日构建")
+    print("AI Daily Digest - 每日构建 (OpenClaw 版)")
     print("=" * 50)
     print(f"开始时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
@@ -65,17 +124,16 @@ def main():
             for item in digest_items
         ]
     }
+    
     print(f"✓ 已生成精选 ({len(digest_items)} 条)")
     print()
     
-    # 3. 翻译内容（使用 Moonshot API）
-    print("【步骤3】翻译内容（Moonshot API）...")
-    digest_data['items'] = batch_translate(digest_data['items'])
+    # 3. 翻译内容（使用 OpenClaw）
+    digest_data['items'] = translate_with_openclaw(digest_data['items'])
     
     # 保存翻译后的数据
     with open(base_dir / 'data' / 'digest.json', 'w', encoding='utf-8') as f:
         json.dump(digest_data, f, ensure_ascii=False, indent=2)
-    print(f"✓ 已保存翻译结果")
     print()
     
     # 4. 生成 Jekyll 文章

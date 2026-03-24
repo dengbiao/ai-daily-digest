@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T00:13:17.505102",
+  "generated_at": "2026-03-25T00:51:45.866851",
   "items": [
     {
       "title": "Powering product discovery in ChatGPT",
@@ -17,7 +17,10 @@
         "OpenAI",
         "智能体"
       ],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "ChatGPT携手Agentic Commerce协议升级购物体验",
+      "cn_summary": "ChatGPT通过引入Agentic Commerce协议，实现更丰富的视觉沉浸式购物体验，支持产品发现、并行比较和商家集成。"
     },
     {
       "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
@@ -35,7 +38,10 @@
         "Microsoft",
         "开源"
       ],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "开源发布",
+      "cn_title": "构建AI辅助的GitHub问题分类系统",
+      "cn_summary": "本教程教你如何在React Native应用中集成Copilot SDK，以生成AI驱动的问题摘要，并提供优雅降级和缓存的生产级模式。"
     },
     {
       "title": "Update on the OpenAI Foundation",
@@ -52,7 +58,10 @@
       "tags": [
         "OpenAI"
       ],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "重大更新",
+      "cn_title": "OpenAI基金会将投10亿美元推进四大领域发展",
+      "cn_summary": "OpenAI基金会宣布，将至少投资10亿美元于疾病治疗、经济机会、人工智能韧性提升和社区项目，以推动相关领域发展。"
     },
     {
       "title": "Vibe-coding startup Lovable is on the hunt for acquisitions",
@@ -67,7 +76,10 @@
         }
       ],
       "tags": [],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "公司动态",
+      "cn_title": "Lovable寻求收购以加速发展",
+      "cn_summary": "公司创始人透露，这家快速成长的品味编码初创企业正寻找合作伙伴或团队加入，以扩展其业务版图。"
     },
     {
       "title": "Bernie Sanders’ AI ‘gotcha’ video flops, but the memes are great",
@@ -84,7 +96,10 @@
       "tags": [
         "Anthropic"
       ],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "桑德斯的AI“陷阱”视频失败，但表情包火了",
+      "cn_summary": "伯尼·桑德斯试图通过Claude揭露AI行业的秘密，但实际上只展示了聊天机器人的配合度有多高。"
     },
     {
       "title": "GitHub expands application security coverage with AI‑powered detections",
@@ -101,7 +116,10 @@
       "tags": [
         "开源"
       ],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "开源发布",
+      "cn_title": "GitHub增强AI检测，拓展应用安全覆盖",
+      "cn_summary": "GitHub Code Security利用CodeQL和AI技术识别多种语言和框架中的漏洞，提升应用安全检测能力。"
     },
     {
       "title": "A New Framework for Evaluating Voice Agents (EVA)",
@@ -118,7 +136,10 @@
       "tags": [
         "智能体"
       ],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "语音代理评估新框架出炉",
+      "cn_summary": "EVA新框架旨在为评估语音代理提供系统化方法，通过多维度测试分析，助力语音技术优化和高效应用，推动智能语音领域发展。"
     },
     {
       "title": "The Bay Area’s animal welfare movement wants to recruit AI",
@@ -133,7 +154,10 @@
         }
       ],
       "tags": [],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "旧金山动物福利运动寻求AI助力",
+      "cn_summary": "二月初，旧金山一家不拘一格的共享工作空间Mox中，动物福利倡导者和AI研究者齐聚一堂，共同探讨如何联合AI技术推进动物福利事业。"
     },
     {
       "title": "Air Street becomes one of the largest solo VCs in Europe with $232M fund",
@@ -148,7 +172,10 @@
         }
       ],
       "tags": [],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "欧洲最大个人创投之一成立 募资2.32亿美元",
+      "cn_summary": "伦敦Air Street Capital宣布成立规模达2.32亿美元的第三支基金，专注于投资早期的欧洲和北美人工智能企业。"
     },
     {
       "title": "Meet the former Apple designer building a new AI interface at Hark",
@@ -163,7 +190,10 @@
         }
       ],
       "tags": [],
-      "related_urls": []
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "苹果前设计师助力打造Hark新一代AI界面",
+      "cn_summary": "Hark宣布将同步设计模型、硬件和界面，打造“无缝端到端个人智能产品”。"
     }
   ]
 }
