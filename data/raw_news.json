@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-03-25T06:03:59.744257",
+  "fetched_at": "2026-03-25T09:48:54.557068",
   "items": [
     {
       "title": "Helping developers build safer AI experiences for teens",
@@ -67,16 +67,42 @@
       "related_sources": null
     },
     {
-      "title": "The Bay Area’s animal welfare movement wants to recruit AI",
-      "url": "https://www.technologyreview.com/2026/03/23/1134491/the-bay-areas-animal-welfare-movement-wants-to-recruit-ai/",
-      "source": "MIT Technology Review - AI",
-      "source_url": "https://www.technologyreview.com/topic/artificial-intelligence/",
-      "published": "2026-03-23T09:00:00",
-      "summary": "In early February, animal welfare advocates and AI researchers gathered in stocking feet at Mox, a scrappy, shoes-free coworking space in San Francisco. Yellow and red canopies billowed overhead, Persian rugs blanketed the floor, and mosaic lamps glowed beside potted plants.&#160; In the common area, a wildlife advocate spoke passionately to a crowd lounging in&#8230;",
-      "content": "In early February, animal welfare advocates and AI researchers gathered in stocking feet at Mox, a scrappy, shoes-free coworking space in San Francisco. Yellow and red canopies billowed overhead, Persian rugs blanketed the floor, and mosaic lamps glowed beside potted plants.&#160; In the common area, a wildlife advocate spoke passionately to a crowd lounging in&#8230;",
+      "title": "With $3.5B in fresh capital, Kleiner Perkins is going all in on AI",
+      "url": "https://techcrunch.com/2026/03/24/with-3-5b-in-fresh-capital-kleiner-perkins-is-going-all-in-on-ai/",
+      "source": "TechCrunch - AI",
+      "source_url": "https://techcrunch.com/category/artificial-intelligence/",
+      "published": "2026-03-25T00:47:20",
+      "summary": "The fundraise includes $1 billion for investing in early-stage startups, and $2.5 billion for late-stage growth businesses.",
+      "content": "The fundraise includes $1 billion for investing in early-stage startups, and $2.5 billion for late-stage growth businesses.",
       "category": "新闻资讯",
       "tags": [],
-      "hash_id": "b960a71b0208",
+      "hash_id": "fcb64694603b",
+      "related_sources": null
+    },
+    {
+      "title": "OpenAI’s Sora was the creepiest app on your phone — now it’s shutting down",
+      "url": "https://techcrunch.com/2026/03/24/openais-sora-was-the-creepiest-app-on-your-phone-now-its-shutting-down/",
+      "source": "TechCrunch - AI",
+      "source_url": "https://techcrunch.com/category/artificial-intelligence/",
+      "published": "2026-03-24T23:57:55",
+      "summary": "Though the underlying Sora 2 video- and audio-generation model is scarily impressive, there was not sustained interest in an AI-only social feed.",
+      "content": "Though the underlying Sora 2 video- and audio-generation model is scarily impressive, there was not sustained interest in an AI-only social feed.",
+      "category": "新闻资讯",
+      "tags": [],
+      "hash_id": "f984d1aac766",
+      "related_sources": null
+    },
+    {
+      "title": "Kentucky woman rejects $26M offer to turn her farm into a data center",
+      "url": "https://techcrunch.com/2026/03/24/kentucky-woman-rejects-26-million-offer-to-turn-her-farm-into-a-data-center/",
+      "source": "TechCrunch - AI",
+      "source_url": "https://techcrunch.com/category/artificial-intelligence/",
+      "published": "2026-03-24T22:22:57",
+      "summary": "A \"major artificial intelligence company\" reportedly offered a Kentucky family $26 million to build a data center on their farm.",
+      "content": "A \"major artificial intelligence company\" reportedly offered a Kentucky family $26 million to build a data center on their farm.",
+      "category": "新闻资讯",
+      "tags": [],
+      "hash_id": "70e7e8bebac6",
       "related_sources": null
     },
     {
@@ -168,45 +194,6 @@
       "category": "新闻资讯",
       "tags": [],
       "hash_id": "d4af6dbda341",
-      "related_sources": null
-    },
-    {
-      "title": "Talat’s AI meeting notes stay on your machine, not in the cloud",
-      "url": "https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/",
-      "source": "TechCrunch - AI",
-      "source_url": "https://techcrunch.com/category/artificial-intelligence/",
-      "published": "2026-03-24T18:41:33",
-      "summary": "The subscription-free AI meeting notes app is a local-first twist on notetaking tools like Granola.",
-      "content": "The subscription-free AI meeting notes app is a local-first twist on notetaking tools like Granola.",
-      "category": "新闻资讯",
-      "tags": [],
-      "hash_id": "424a026b9c96",
-      "related_sources": null
-    },
-    {
-      "title": "Doss raises $55M for AI inventory management that plugs into ERP",
-      "url": "https://techcrunch.com/2026/03/24/doss-raises-55m-for-ai-inventory-management-that-plugs-into-erp/",
-      "source": "TechCrunch - AI",
-      "source_url": "https://techcrunch.com/category/artificial-intelligence/",
-      "published": "2026-03-24T17:18:29",
-      "summary": "Doss's AI-powered inventory management system integrates with existing ERP systems. The Series B round was co-led by Madrona and Premji Invest.",
-      "content": "Doss's AI-powered inventory management system integrates with existing ERP systems. The Series B round was co-led by Madrona and Premji Invest.",
-      "category": "新闻资讯",
-      "tags": [],
-      "hash_id": "16cb9fb648de",
-      "related_sources": null
-    },
-    {
-      "title": "Meet the former Apple designer building a new AI interface at Hark",
-      "url": "https://techcrunch.com/2026/03/24/meet-the-former-apple-designer-building-a-new-ai-interface-at-hark/",
-      "source": "TechCrunch - AI",
-      "source_url": "https://techcrunch.com/category/artificial-intelligence/",
-      "published": "2026-03-24T16:00:00",
-      "summary": "The company said it would design models, hardware, and interfaces in tandem to deliver a \"seamless end-to-end personal intelligence product.\"",
-      "content": "The company said it would design models, hardware, and interfaces in tandem to deliver a \"seamless end-to-end personal intelligence product.\"",
-      "category": "新闻资讯",
-      "tags": [],
-      "hash_id": "fdeb29f3641a",
       "related_sources": null
     },
     {

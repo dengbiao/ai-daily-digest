@@ -1,6 +1,6 @@
 ---
 title: "AI日报 2026年03月25日"
-date: 2026-03-25 06:04:04 +0800
+date: 2026-03-25 09:49:02 +0800
 category: 日报
 news_count: 10
 ---
@@ -62,44 +62,6 @@ news_count: 10
 
   <div class="news-header">
     <span class="news-number">03</span>
-    <span class="news-type">⚡ 重大更新</span>
-  </div>
-
-  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/" target="_blank" rel="noopener">Google：Google TV’s new Gemini features</a></h2>
-
-  <p class="news-summary">Google发布重要更新，点击查看详情了解完整信息。</p>
-
-  <div class="news-footer">
-    <a href="https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
-    <span class="tag">Google</span>
-  </div>
-
-</article>
-
-<!-- 新闻 4 -->
-<article class="news-item">
-
-  <div class="news-header">
-    <span class="news-number">04</span>
-    <span class="news-type">🔓 开源发布</span>
-  </div>
-
-  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/" target="_blank" rel="noopener">OpenAI：OpenAI adds open source tools</a></h2>
-
-  <p class="news-summary">OpenAI发布重要更新，点击查看详情了解完整信息。</p>
-
-  <div class="news-footer">
-    <a href="https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
-    <span class="tag">OpenAI</span> <span class="tag">开源</span>
-  </div>
-
-</article>
-
-<!-- 新闻 5 -->
-<article class="news-item">
-
-  <div class="news-header">
-    <span class="news-number">05</span>
     <span class="news-type">🔓 开源发布</span>
   </div>
 
@@ -114,11 +76,11 @@ news_count: 10
 
 </article>
 
-<!-- 新闻 6 -->
+<!-- 新闻 4 -->
 <article class="news-item">
 
   <div class="news-header">
-    <span class="news-number">06</span>
+    <span class="news-number">04</span>
     <span class="news-type">⚡ 重大更新</span>
   </div>
 
@@ -133,11 +95,68 @@ news_count: 10
 
 </article>
 
+<!-- 新闻 5 -->
+<article class="news-item">
+
+  <div class="news-header">
+    <span class="news-number">05</span>
+    <span class="news-type">⚡ 重大更新</span>
+  </div>
+
+  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/" target="_blank" rel="noopener">Google：Google TV’s new Gemini features</a></h2>
+
+  <p class="news-summary">Google发布重要更新，点击查看详情了解完整信息。</p>
+
+  <div class="news-footer">
+    <a href="https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
+    <span class="tag">Google</span>
+  </div>
+
+</article>
+
+<!-- 新闻 6 -->
+<article class="news-item">
+
+  <div class="news-header">
+    <span class="news-number">06</span>
+    <span class="news-type">📰 行业新闻</span>
+  </div>
+
+  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/with-3-5b-in-fresh-capital-kleiner-perkins-is-going-all-in-on-ai/" target="_blank" rel="noopener">Kleiner Perkins豪掷35亿美元布局人工智能</a></h2>
+
+  <p class="news-summary">Kleiner Perkins新筹集的资本中，有10亿美元用于投资早期初创企业，另有25亿美元用于支持成熟企业后期增长。</p>
+
+  <div class="news-footer">
+    <a href="https://techcrunch.com/2026/03/24/with-3-5b-in-fresh-capital-kleiner-perkins-is-going-all-in-on-ai/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
+    
+  </div>
+
+</article>
+
 <!-- 新闻 7 -->
 <article class="news-item">
 
   <div class="news-header">
     <span class="news-number">07</span>
+    <span class="news-type">🔓 开源发布</span>
+  </div>
+
+  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/" target="_blank" rel="noopener">OpenAI：OpenAI adds open source tools</a></h2>
+
+  <p class="news-summary">OpenAI发布重要更新，点击查看详情了解完整信息。</p>
+
+  <div class="news-footer">
+    <a href="https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
+    <span class="tag">OpenAI</span> <span class="tag">开源</span>
+  </div>
+
+</article>
+
+<!-- 新闻 8 -->
+<article class="news-item">
+
+  <div class="news-header">
+    <span class="news-number">08</span>
     <span class="news-type">📰 行业新闻</span>
   </div>
 
@@ -152,11 +171,11 @@ news_count: 10
 
 </article>
 
-<!-- 新闻 8 -->
+<!-- 新闻 9 -->
 <article class="news-item">
 
   <div class="news-header">
-    <span class="news-number">08</span>
+    <span class="news-number">09</span>
     <span class="news-type">📰 行业新闻</span>
   </div>
 
@@ -167,25 +186,6 @@ news_count: 10
   <div class="news-footer">
     <a href="https://techcrunch.com/2026/03/24/openais-plans-to-make-chatgpt-more-like-amazon-arent-going-so-well/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
     <span class="tag">OpenAI</span>
-  </div>
-
-</article>
-
-<!-- 新闻 9 -->
-<article class="news-item">
-
-  <div class="news-header">
-    <span class="news-number">09</span>
-    <span class="news-type">📰 行业新闻</span>
-  </div>
-
-  <h2 class="news-title"><a href="https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/" target="_blank" rel="noopener">Talat’s AI meeting notes stay</a></h2>
-
-  <p class="news-summary">点击查看原文了解详情。</p>
-
-  <div class="news-footer">
-    <a href="https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/" target="_blank" rel="noopener" class="source-link">TechCrunch - AI</a>
-    
   </div>
 
 </article>

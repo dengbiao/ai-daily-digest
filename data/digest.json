@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T06:03:59.753210",
+  "generated_at": "2026-03-25T09:48:54.565627",
   "items": [
     {
       "title": "Helping developers build safer AI experiences for teens",
@@ -44,47 +44,6 @@
       "cn_summary": "ChatGPT通过引入Agentic Commerce协议，实现更丰富的视觉沉浸式购物体验，支持产品发现、并行比较和商家集成。"
     },
     {
-      "title": "Google TV’s new Gemini features keep fans updated on sports teams and more",
-      "summary": "Three Gemini-powered features are coming to your Google TV. This includes visual responses, deep dives, and sports briefs.",
-      "importance": 10,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/"
-        }
-      ],
-      "tags": [
-        "Google"
-      ],
-      "related_urls": [],
-      "event_type": "重大更新",
-      "cn_title": "Google：Google TV’s new Gemini features",
-      "cn_summary": "Google发布重要更新，点击查看详情了解完整信息。"
-    },
-    {
-      "title": "OpenAI adds open source tools to help developers build for teen safety",
-      "summary": "Rather than working from scratch to figure out how to make AI safer for teens, developers can use these policies to fortify what they build.",
-      "importance": 10,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/"
-        }
-      ],
-      "tags": [
-        "OpenAI",
-        "开源"
-      ],
-      "related_urls": [],
-      "event_type": "开源发布",
-      "cn_title": "OpenAI：OpenAI adds open source tools",
-      "cn_summary": "OpenAI发布重要更新，点击查看详情了解完整信息。"
-    },
-    {
       "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
       "summary": "Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.\nThe post Building AI-powered GitHub issue triage with the Copilot SDK appeared first on The GitHub Blog.",
       "importance": 10,
@@ -126,9 +85,68 @@
       "cn_summary": "OpenAI基金会宣布，将至少投资10亿美元于疾病治疗、经济机会、人工智能韧性提升和社区项目，以推动相关领域发展。"
     },
     {
+      "title": "Google TV’s new Gemini features keep fans updated on sports teams and more",
+      "summary": "Three Gemini-powered features are coming to your Google TV. This includes visual responses, deep dives, and sports briefs.",
+      "importance": 9,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/"
+        }
+      ],
+      "tags": [
+        "Google"
+      ],
+      "related_urls": [],
+      "event_type": "重大更新",
+      "cn_title": "Google：Google TV’s new Gemini features",
+      "cn_summary": "Google发布重要更新，点击查看详情了解完整信息。"
+    },
+    {
+      "title": "With $3.5B in fresh capital, Kleiner Perkins is going all in on AI",
+      "summary": "The fundraise includes $1 billion for investing in early-stage startups, and $2.5 billion for late-stage growth businesses.",
+      "importance": 9,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/24/with-3-5b-in-fresh-capital-kleiner-perkins-is-going-all-in-on-ai/"
+        }
+      ],
+      "tags": [],
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "Kleiner Perkins豪掷35亿美元布局人工智能",
+      "cn_summary": "Kleiner Perkins新筹集的资本中，有10亿美元用于投资早期初创企业，另有25亿美元用于支持成熟企业后期增长。"
+    },
+    {
+      "title": "OpenAI adds open source tools to help developers build for teen safety",
+      "summary": "Rather than working from scratch to figure out how to make AI safer for teens, developers can use these policies to fortify what they build.",
+      "importance": 9,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "开源"
+      ],
+      "related_urls": [],
+      "event_type": "开源发布",
+      "cn_title": "OpenAI：OpenAI adds open source tools",
+      "cn_summary": "OpenAI发布重要更新，点击查看详情了解完整信息。"
+    },
+    {
       "title": "Anthropic hands Claude Code more control, but keeps it on a leash",
       "summary": "Anthropic’s new auto mode for Claude Code lets AI execute tasks with fewer approvals, reflecting a broader shift toward more autonomous tools that balance speed with safety through built-in safeguards.",
-      "importance": 9,
+      "importance": 8,
       "category": "📰 新闻资讯",
       "sources": [
         {
@@ -148,7 +166,7 @@
     {
       "title": "OpenAI’s plans to make ChatGPT more like Amazon aren’t going so well",
       "summary": "OpenAI says it's moving away from Instant Checkout, which allowed users to buy items directly through the ChatGPT interface.",
-      "importance": 9,
+      "importance": 8,
       "category": "📰 新闻资讯",
       "sources": [
         {
@@ -164,24 +182,6 @@
       "event_type": "行业新闻",
       "cn_title": "OpenAI：OpenAI’s plans to make ChatGPT",
       "cn_summary": "OpenAI发布重要更新，点击查看详情了解完整信息。"
-    },
-    {
-      "title": "Talat’s AI meeting notes stay on your machine, not in the cloud",
-      "summary": "The subscription-free AI meeting notes app is a local-first twist on notetaking tools like Granola.",
-      "importance": 9,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/"
-        }
-      ],
-      "tags": [],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "Talat’s AI meeting notes stay",
-      "cn_summary": "点击查看原文了解详情。"
     },
     {
       "title": "GitHub expands application security coverage with AI‑powered detections",
