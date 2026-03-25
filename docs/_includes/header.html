@@ -1,21 +1,21 @@
 <!-- Header -->
-<header class="bg-gradient-to-r from-dark-surface to-gray-800 border-b border-dark-border">
-  <div class="container mx-auto px-4 py-8 max-w-5xl">
+<header class="bg-white border-b border-light-border shadow-sm">
+  <div class="container mx-auto px-4 py-6 max-w-5xl">
     <div class="flex items-center justify-between">
       <div>
-        <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
           🤖 AI Daily Digest
         </h1>
-        <p class="text-gray-400 mt-2">每日AI精选资讯</p>
+        <p class="text-slate-500 mt-1">每日AI精选资讯</p>
       </div>
       <nav class="hidden md:flex gap-6">
-        <a href="{{ '/' | relative_url }}" class="text-gray-400 hover:text-blue-400 transition {% if page.url == '/' %}text-blue-400{% endif %}">首页</a>
-        <a href="{{ '/archive' | relative_url }}" class="text-gray-400 hover:text-blue-400 transition {% if page.url contains 'archive' %}text-blue-400{% endif %}">归档</a>
-        <a href="{{ '/about' | relative_url }}" class="text-gray-400 hover:text-blue-400 transition {% if page.url contains 'about' %}text-blue-400{% endif %}">关于</a>
-        <a href="https://github.com/dengbiao/ai-daily-digest" target="_blank" class="text-gray-400 hover:text-blue-400 transition">GitHub</a>
+        <a href="{{ '/' | relative_url }}" class="text-slate-500 hover:text-blue-500 transition {% if page.url == '/' %}text-blue-500 font-medium{% endif %}">首页</a>
+        <a href="{{ '/archive' | relative_url }}" class="text-slate-500 hover:text-blue-500 transition {% if page.url contains 'archive' %}text-blue-500 font-medium{% endif %}">归档</a>
+        <a href="{{ '/about' | relative_url }}" class="text-slate-500 hover:text-blue-500 transition {% if page.url contains 'about' %}text-blue-500 font-medium{% endif %}">关于</a>
+        <a href="https://github.com/dengbiao/ai-daily-digest" target="_blank" class="text-slate-500 hover:text-blue-500 transition">GitHub</a>
       </nav>
       <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white">
+      <button id="mobile-menu-btn" class="md:hidden text-slate-500 hover:text-slate-700">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -23,10 +23,10 @@
     </div>
     <!-- Mobile menu -->
     <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
-      <a href="{{ '/' | relative_url }}" class="block text-gray-400 hover:text-blue-400 py-2">首页</a>
-      <a href="{{ '/archive' | relative_url }}" class="block text-gray-400 hover:text-blue-400 py-2">归档</a>
-      <a href="{{ '/about' | relative_url }}" class="block text-gray-400 hover:text-blue-400 py-2">关于</a>
-      <a href="https://github.com/dengbiao/ai-daily-digest" target="_blank" class="block text-gray-400 hover:text-blue-400 py-2">GitHub</a>
+      <a href="{{ '/' | relative_url }}" class="block text-slate-500 hover:text-blue-500 py-2">首页</a>
+      <a href="{{ '/archive' | relative_url }}" class="block text-slate-500 hover:text-blue-500 py-2">归档</a>
+      <a href="{{ '/about' | relative_url }}" class="block text-slate-500 hover:text-blue-500 py-2">关于</a>
+      <a href="https://github.com/dengbiao/ai-daily-digest" target="_blank" class="block text-slate-500 hover:text-blue-500 py-2">GitHub</a>
     </nav>
   </div>
 </header>

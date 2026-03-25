@@ -10,16 +10,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
             primary: '#3b82f6',
             secondary: '#8b5cf6',
-            dark: {
-              bg: '#0f172a',
-              surface: '#1e293b',
-              border: '#334155'
+            light: {
+              bg: '#f8fafc',
+              surface: '#ffffff',
+              border: '#e2e8f0'
             }
           }
         }
@@ -35,7 +34,7 @@
   
   {% feed_meta %}
 </head>
-<body class="bg-dark-bg text-gray-100 min-h-screen">
+<body class="bg-light-bg text-slate-700 min-h-screen">
   {% include header.html %}
   
   <main class="container mx-auto px-4 py-8 max-w-5xl">
