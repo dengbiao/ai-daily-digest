@@ -42,5 +42,33 @@
   "A New Framework for Evaluating Voice Agents (EVA)|": {
     "title": "评估语音助手的新框架EVA问世",
     "summary": "EVA为评估语音智能助手提供新框架，旨在衡量这些助手的能力、效率和用户体验，进一步推动语音技术发展。"
+  },
+  "Introducing the OpenAI Safety Bug Bounty program|OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risk": {
+    "title": "OpenAI启动安全漏洞赏金计划",
+    "summary": "为识别AI滥用和安全风险，OpenAI宣布推出安全漏洞赏金计划，涵盖代理漏洞、提示注入及数据泄露等问题。"
+  },
+  "This startup wants to change how mathematicians do math|Axiom Math, a startup based in Palo Alto, California, has released a free new AI": {
+    "title": "加州Axiom Math推免费AI工具革新数学研究",
+    "summary": "位于加州帕洛阿尔托的初创公司Axiom Math推出了一款新的免费人工智能工具，旨在帮助数学家发现数学模式，以解决长期存在的难题。"
+  },
+  "The AI Hype Index: AI goes to war|AI is at war. Anthropic and the Pentagon feuded over how to weaponize Anthropic’": {
+    "title": "人工智能巨头争夺军事化机遇",
+    "summary": "人形智能和五角大楼就如何军事化其AI模型Claude发生争执；OpenAI则以“机会主义和马虎”的协议赢得五角大楼青睐，导致大量用户离开ChatGPT。"
+  },
+  "Google launches Lyria 3 Pro music generation model|Google is launching Lyria 3 Pro, an upgraded music model that generates longer, ": {
+    "title": "谷歌推出Lyria 3 Pro升级版音乐生成模型",
+    "summary": "谷歌发布Lyria 3 Pro，这是其最新升级的AI音乐模型，能够生成更长久且可定制的音乐曲目。该公司在Gemini、企业产品和其他服务中扩展了其AI音乐工具的应用范围。"
+  },
+  "Meta launches new initiative to support entrepreneurship, drive AI adoption|Meta CEO Mark Zuckerberg said in a memo to staff that small businesses have alwa": {
+    "title": "Meta推新计划助力中小企业与AI应用",
+    "summary": "Meta公司首席执行官马克·扎克伯格在给员工的备忘录中表示，中小企业一直是公司商业模式的重要组成部分。尽管已经有数千万企业家使用Meta平台拓展业务和联系客户，公司希望在这个领域做得更多。"
+  },
+  "Updates to GitHub Copilot interaction data usage policy|From April 24 onward, interaction data—specifically inputs, outputs, code snippe": {
+    "title": "GitHub Copilot数据使用政策更新",
+    "summary": "自4月24日起，除非选择退出，否则GitHub Copilot免费版、Pro版和Pro+版用户的交互数据将用于训练和提升AI模型。"
+  },
+  "Inside our approach to the Model Spec|Learn how OpenAI’s Model Spec serves as a public framework for model behavior, b": {
+    "title": "揭秘OpenAI模型规范的设计哲学",
+    "summary": "OpenAI的模型规范是一个公开的框架，用于指导模型行为，随着人工智能系统的演进，它平衡了安全性、用户自由度和可问责性。"
   }
 }

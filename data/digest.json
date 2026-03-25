@@ -1,6 +1,28 @@
 {
-  "generated_at": "2026-03-25T14:20:47.423099",
+  "generated_at": "2026-03-26T06:24:30.269091",
   "items": [
+    {
+      "title": "Introducing the OpenAI Safety Bug Bounty program",
+      "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+      "importance": 10,
+      "category": "🔥 行业动态",
+      "sources": [
+        {
+          "name": "OpenAI 官方博客",
+          "url": "https://openai.com/news",
+          "item_url": "https://openai.com/index/safety-bug-bounty"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "产品发布",
+        "智能体"
+      ],
+      "related_urls": [],
+      "event_type": "产品发布",
+      "cn_title": "OpenAI启动安全漏洞赏金计划",
+      "cn_summary": "为识别AI滥用和安全风险，OpenAI宣布推出安全漏洞赏金计划，涵盖代理漏洞、提示注入及数据泄露等问题。"
+    },
     {
       "title": "Helping developers build safer AI experiences for teens",
       "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
@@ -44,6 +66,110 @@
       "cn_summary": "ChatGPT通过Agentic Commerce协议引入更丰富的视觉购物体验，支持产品发现、直观比较和商家集成功能。"
     },
     {
+      "title": "This startup wants to change how mathematicians do math",
+      "summary": "Axiom Math, a startup based in Palo Alto, California, has released a free new AI tool for mathematicians, designed to discover mathematical patterns that could unlock solutions to long-standing problems.",
+      "importance": 10,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "MIT Technology Review - AI",
+          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+          "item_url": "https://www.technologyreview.com/2026/03/25/1134642/this-startup-wants-to-change-how-mathematicians-do-math/"
+        }
+      ],
+      "tags": [
+        "产品发布"
+      ],
+      "related_urls": [],
+      "event_type": "产品发布",
+      "cn_title": "加州Axiom Math推免费AI工具革新数学研究",
+      "cn_summary": "位于加州帕洛阿尔托的初创公司Axiom Math推出了一款新的免费人工智能工具，旨在帮助数学家发现数学模式，以解决长期存在的难题。"
+    },
+    {
+      "title": "The AI Hype Index: AI goes to war",
+      "summary": "AI is at war. Anthropic and the Pentagon feuded over how to weaponize Anthropic’s AI model Claude; then OpenAI swept the Pentagon off its feet with an “opportunistic and sloppy” deal. Users quit ChatGPT in droves.",
+      "importance": 10,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "MIT Technology Review - AI",
+          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+          "item_url": "https://www.technologyreview.com/2026/03/25/1134571/the-ai-hype-index-ai-goes-to-war/"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "Anthropic"
+      ],
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "人工智能巨头争夺军事化机遇",
+      "cn_summary": "人形智能和五角大楼就如何军事化其AI模型Claude发生争执；OpenAI则以“机会主义和马虎”的协议赢得五角大楼青睐，导致大量用户离开ChatGPT。"
+    },
+    {
+      "title": "Google launches Lyria 3 Pro music generation model",
+      "summary": "Google is launching Lyria 3 Pro, an upgraded music model that generates longer, more customizable tracks, as it expands AI music tools across Gemini, enterprise products, and other services.",
+      "importance": 10,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/25/google-launches-lyria-3-pro-music-generation-model/"
+        }
+      ],
+      "tags": [
+        "Google",
+        "产品发布"
+      ],
+      "related_urls": [],
+      "event_type": "产品发布",
+      "cn_title": "谷歌推出Lyria 3 Pro升级版音乐生成模型",
+      "cn_summary": "谷歌发布Lyria 3 Pro，这是其最新升级的AI音乐模型，能够生成更长久且可定制的音乐曲目。该公司在Gemini、企业产品和其他服务中扩展了其AI音乐工具的应用范围。"
+    },
+    {
+      "title": "Meta launches new initiative to support entrepreneurship, drive AI adoption",
+      "summary": "Meta CEO Mark Zuckerberg said in a memo to staff that small businesses have always been a big part of the company's business model, and that while tens of millions of entrepreneurs already use its platforms to grow and connect with customers, the company wants to do more in the space.",
+      "importance": 10,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/25/meta-launches-new-initiative-to-support-entrepreneurship-drive-ai-adoption/"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "产品发布"
+      ],
+      "related_urls": [],
+      "event_type": "产品发布",
+      "cn_title": "Meta推新计划助力中小企业与AI应用",
+      "cn_summary": "Meta公司首席执行官马克·扎克伯格在给员工的备忘录中表示，中小企业一直是公司商业模式的重要组成部分。尽管已经有数千万企业家使用Meta平台拓展业务和联系客户，公司希望在这个领域做得更多。"
+    },
+    {
+      "title": "Updates to GitHub Copilot interaction data usage policy",
+      "summary": "From April 24 onward, interaction data—specifically inputs, outputs, code snippets, and associated context—from Copilot Free, Pro, and Pro+ users will be used to train and improve our AI models unless they opt out.",
+      "importance": 10,
+      "category": "🛠️ 工具资源",
+      "sources": [
+        {
+          "name": "GitHub 博客",
+          "url": "https://github.blog/",
+          "item_url": "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/"
+        }
+      ],
+      "tags": [
+        "Microsoft",
+        "开源"
+      ],
+      "related_urls": [],
+      "event_type": "重大更新",
+      "cn_title": "GitHub Copilot数据使用政策更新",
+      "cn_summary": "自4月24日起，除非选择退出，否则GitHub Copilot免费版、Pro版和Pro+版用户的交互数据将用于训练和提升AI模型。"
+    },
+    {
       "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
       "summary": "Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.\nThe post Building AI-powered GitHub issue triage with the Copilot SDK appeared first on The GitHub Blog.",
       "importance": 10,
@@ -65,96 +191,15 @@
       "cn_summary": "了解如何将Copilot SDK集成到React Native应用中，以生成AI驱动的问题摘要，并采用优雅的降级和缓存方案。GitHub Blog首发。"
     },
     {
-      "title": "Update on the OpenAI Foundation",
-      "summary": "The OpenAI Foundation announces plans to invest at least $1 billion in curing diseases, economic opportunity, AI resilience, and community programs.",
+      "title": "Inside our approach to the Model Spec",
+      "summary": "Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.",
       "importance": 9,
       "category": "🔥 行业动态",
       "sources": [
         {
           "name": "OpenAI 官方博客",
           "url": "https://openai.com/news",
-          "item_url": "https://openai.com/index/update-on-the-openai-foundation"
-        }
-      ],
-      "tags": [
-        "OpenAI"
-      ],
-      "related_urls": [],
-      "event_type": "重大更新",
-      "cn_title": "OpenAI基金会拟投10亿美元支持四大领域",
-      "cn_summary": "OpenAI基金会宣布，将至少投资10亿美元于疾病治疗、经济机会、人工智能韧性和社区项目，以推动相关领域进步。"
-    },
-    {
-      "title": "Google TV’s new Gemini features keep fans updated on sports teams and more",
-      "summary": "Three Gemini-powered features are coming to your Google TV. This includes visual responses, deep dives, and sports briefs.",
-      "importance": 9,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/"
-        }
-      ],
-      "tags": [
-        "Google"
-      ],
-      "related_urls": [],
-      "event_type": "重大更新",
-      "cn_title": "谷歌电视更新Gemini功能 体育队况快速掌握",
-      "cn_summary": "谷歌电视即将推出三项Gemini功能，包括视觉响应、深度剖析和体育简讯，让球迷和用户能够及时了解体育队伍、娱乐和其他信息。"
-    },
-    {
-      "title": "OpenAI adds open source tools to help developers build for teen safety",
-      "summary": "Rather than working from scratch to figure out how to make AI safer for teens, developers can use these policies to fortify what they build.",
-      "importance": 9,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/"
-        }
-      ],
-      "tags": [
-        "OpenAI",
-        "开源"
-      ],
-      "related_urls": [],
-      "event_type": "开源发布",
-      "cn_title": "OpenAI推出开源工具助力青少年网络安全",
-      "cn_summary": "开发者不再需要从头开始研究如何使AI更安全地服务于青少年，而是可以直接利用OpenAI提供的策略来增强他们所构建的产品。"
-    },
-    {
-      "title": "Anthropic hands Claude Code more control, but keeps it on a leash",
-      "summary": "Anthropic’s new auto mode for Claude Code lets AI execute tasks with fewer approvals, reflecting a broader shift toward more autonomous tools that balance speed with safety through built-in safeguards.",
-      "importance": 8,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/"
-        }
-      ],
-      "tags": [
-        "Anthropic"
-      ],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "Anthropic赋予Claude Code更多自主权",
-      "cn_summary": "Anthropic为Claude Code新增自动模式，简化AI执行任务审批流程，展现向更自主工具转变的趋势，同时内置安全措施确保平衡速度与安全性。"
-    },
-    {
-      "title": "OpenAI’s plans to make ChatGPT more like Amazon aren’t going so well",
-      "summary": "OpenAI says it's moving away from Instant Checkout, which allowed users to buy items directly through the ChatGPT interface.",
-      "importance": 8,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/openais-plans-to-make-chatgpt-more-like-amazon-arent-going-so-well/"
+          "item_url": "https://openai.com/index/our-approach-to-the-model-spec"
         }
       ],
       "tags": [
@@ -162,48 +207,8 @@
       ],
       "related_urls": [],
       "event_type": "行业新闻",
-      "cn_title": "OpenAI旗下ChatGPT对电商功能调整",
-      "cn_summary": "OpenAI宣布将不再支持通过ChatGPT界面直接购买商品的即时结账服务，进一步明确其AI发展方向。"
-    },
-    {
-      "title": "GitHub expands application security coverage with AI‑powered detections",
-      "summary": "CodeQL and AI‑powered detections work together in GitHub Code Security to identify vulnerabilities across more languages and frameworks.\nThe post GitHub expands application security coverage with AI‑powered detections appeared first on The GitHub Blog.",
-      "importance": 8,
-      "category": "🛠️ 工具资源",
-      "sources": [
-        {
-          "name": "GitHub 博客",
-          "url": "https://github.blog/",
-          "item_url": "https://github.blog/security/application-security/github-expands-application-security-coverage-with-ai-powered-detections/"
-        }
-      ],
-      "tags": [
-        "开源"
-      ],
-      "related_urls": [],
-      "event_type": "开源发布",
-      "cn_title": "GitHub通过AI增强安全防护覆盖范围",
-      "cn_summary": "GitHub Code Security采用CodeQL和AI检测技术，识别更多语言和框架中的漏洞，扩大应用安全覆盖面。"
-    },
-    {
-      "title": "A New Framework for Evaluating Voice Agents (EVA)",
-      "summary": "",
-      "importance": 8,
-      "category": "🛠️ 工具资源",
-      "sources": [
-        {
-          "name": "Hugging Face 博客",
-          "url": "https://huggingface.co/blog",
-          "item_url": "https://huggingface.co/blog/ServiceNow-AI/eva"
-        }
-      ],
-      "tags": [
-        "智能体"
-      ],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "评估语音助手的新框架EVA问世",
-      "cn_summary": "EVA为评估语音智能助手提供新框架，旨在衡量这些助手的能力、效率和用户体验，进一步推动语音技术发展。"
+      "cn_title": "揭秘OpenAI模型规范的设计哲学",
+      "cn_summary": "OpenAI的模型规范是一个公开的框架，用于指导模型行为，随着人工智能系统的演进，它平衡了安全性、用户自由度和可问责性。"
     }
   ]
 }
