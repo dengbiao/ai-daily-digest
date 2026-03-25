@@ -38,5 +38,9 @@
   "GitHub expands application security coverage with AI‑powered detections|CodeQL and AI‑powered detections work together in GitHub Code Security to identi": {
     "title": "GitHub通过AI增强安全防护覆盖范围",
     "summary": "GitHub Code Security采用CodeQL和AI检测技术，识别更多语言和框架中的漏洞，扩大应用安全覆盖面。"
+  },
+  "A New Framework for Evaluating Voice Agents (EVA)|": {
+    "title": "评估语音助手的新框架EVA问世",
+    "summary": "EVA为评估语音智能助手提供新框架，旨在衡量这些助手的能力、效率和用户体验，进一步推动语音技术发展。"
   }
 }

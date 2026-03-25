@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T10:45:39.429091",
+  "generated_at": "2026-03-25T14:20:47.423099",
   "items": [
     {
       "title": "Helping developers build safer AI experiences for teens",
@@ -105,24 +105,6 @@
       "cn_summary": "谷歌电视即将推出三项Gemini功能，包括视觉响应、深度剖析和体育简讯，让球迷和用户能够及时了解体育队伍、娱乐和其他信息。"
     },
     {
-      "title": "With $3.5B in fresh capital, Kleiner Perkins is going all in on AI",
-      "summary": "The fundraise includes $1 billion for investing in early-stage startups, and $2.5 billion for late-stage growth businesses.",
-      "importance": 9,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/24/with-3-5b-in-fresh-capital-kleiner-perkins-is-going-all-in-on-ai/"
-        }
-      ],
-      "tags": [],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "Kleiner Perkins斥资35亿 全力押注人工智能",
-      "cn_summary": "Kleiner Perkins募集的新资本中，10亿美元用于投资初创企业，另25亿美元投入成熟阶段增长型企业。"
-    },
-    {
       "title": "OpenAI adds open source tools to help developers build for teen safety",
       "summary": "Rather than working from scratch to figure out how to make AI safer for teens, developers can use these policies to fortify what they build.",
       "importance": 9,
@@ -202,6 +184,26 @@
       "event_type": "开源发布",
       "cn_title": "GitHub通过AI增强安全防护覆盖范围",
       "cn_summary": "GitHub Code Security采用CodeQL和AI检测技术，识别更多语言和框架中的漏洞，扩大应用安全覆盖面。"
+    },
+    {
+      "title": "A New Framework for Evaluating Voice Agents (EVA)",
+      "summary": "",
+      "importance": 8,
+      "category": "🛠️ 工具资源",
+      "sources": [
+        {
+          "name": "Hugging Face 博客",
+          "url": "https://huggingface.co/blog",
+          "item_url": "https://huggingface.co/blog/ServiceNow-AI/eva"
+        }
+      ],
+      "tags": [
+        "智能体"
+      ],
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "评估语音助手的新框架EVA问世",
+      "cn_summary": "EVA为评估语音智能助手提供新框架，旨在衡量这些助手的能力、效率和用户体验，进一步推动语音技术发展。"
     }
   ]
 }

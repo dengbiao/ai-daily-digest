@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-AI Daily Digest - Jekyll 网站生成器（微信风格版）
-生成中文 Jekyll 格式的文章和页面
+AI Daily Digest - Jekyll 网站生成器（文章流式版）
+生成一篇连贯的精炼文章，而非卡片列表
 """
 
 import json
@@ -43,7 +43,7 @@ class JekyllGenerator:
         return filepath
     
     def _generate_post_content(self, data: dict, date: datetime) -> str:
-        """生成文章 Markdown 内容 - 微信风格"""
+        """生成文章 Markdown 内容 - 文章流式"""
         items = data.get('items', [])
         date_str = date.strftime('%Y年%m月%d日')
         
@@ -55,34 +55,41 @@ class JekyllGenerator:
             f'news_count: {len(items)}',
             '---',
             '',
-            '<div class="container">',
+            '<div class="article-container">',
             '',
             '<!-- 日报头部 -->',
-            '<header class="daily-header">',
-            f'  <h1 class="daily-title">AI日报 {date_str}</h1>',
-            '  <div class="daily-meta">',
-            f'    <span class="date">{date_str}</span>',
-            f'    <span class="count">{len(items)} 条资讯</span>',
+            '<header class="article-header">',
+            f'  <h1 class="article-title">AI日报 {date_str}</h1>',
+            '  <div class="article-meta">',
+            f'    <span>📅 {date_str}</span>',
+            f'    <span>📊 {len(items)} 条精选资讯</span>',
             '  </div>',
             '</header>',
             '',
-            '<!-- 新闻列表 -->',
-            '<div class="news-list">',
-            '',
+            '<!-- 导语 -->',
+            '<p class="article-lead">',
+            f'  今日AI领域共精选 {len(items)} 条重要资讯，涵盖',
         ]
         
-        # 生成每条新闻
-        for i, item in enumerate(items, 1):
-            lines.extend(self._generate_news_section(item, i))
-        
-        lines.append('</div>')
+        # 收集所有事件类型
+        event_types = set()
+        for item in items:
+            event_types.add(item.get('event_type', '行业新闻'))
+        event_type_names = list(event_types)[:3]
+        lines.append(f'{"、".join(event_type_names)}等方面。以下是详细内容：')
+        lines.append('</p>')
         lines.append('')
+        
+        # 生成文章正文 - 连贯的段落
+        for i, item in enumerate(items, 1):
+            lines.extend(self._generate_news_paragraph(item, i))
         
         # 页脚
         lines.extend([
+            '',
             '<!-- 日报页脚 -->',
-            '<footer class="daily-footer">',
-            '  <p>AI Daily Digest · 每日追踪AI大事件</p>',
+            '<footer class="article-footer">',
+            '  <p>— 本文由 AI Daily Digest 自动生成 —</p>',
             '</footer>',
             '',
             '</div>',
@@ -90,8 +97,8 @@ class JekyllGenerator:
         
         return '\n'.join(lines)
     
-    def _generate_news_section(self, item: dict, index: int) -> list:
-        """生成单条新闻的 Markdown - 微信风格"""
+    def _generate_news_paragraph(self, item: dict, index: int) -> list:
+        """生成单条新闻的段落 - 文章流式"""
         # 优先使用已翻译的内容
         if 'cn_title' in item and 'cn_summary' in item:
             cn_title = item['cn_title']
@@ -107,15 +114,6 @@ class JekyllGenerator:
         # 获取事件类型
         event_type = item.get('event_type', '行业新闻')
         event_label = self.cn_generator.get_event_type_label(event_type)
-        importance = item['importance']
-        
-        # 热度等级
-        if importance >= 9:
-            heat_class = 'heat-high'
-        elif importance >= 7:
-            heat_class = 'heat-medium'
-        else:
-            heat_class = 'heat-normal'
         
         # 获取来源链接
         sources = item.get('sources', [])
@@ -124,27 +122,19 @@ class JekyllGenerator:
         
         # 获取标签
         tags = item.get('tags', [])
-        tags_html = ' '.join([f'<span class="tag">{tag}</span>' for tag in tags[:3]]) if tags else ''
+        tags_text = ' '.join([f'#{tag}' for tag in tags[:2]]) if tags else ''
         
         lines = [
-            f'<!-- 新闻 {index} -->',
-            f'<article class="news-item">',
-            '',
-            '  <div class="news-header">',
-            f'    <span class="news-number">{index:02d}</span>',
-            f'    <span class="news-type">{event_label}</span>',
+            f'<!-- 资讯 {index} -->',
+            '<div class="news-section">',
+            f'  <h2><span class="news-index">{index}.</span> {cn_title}</h2>',
+            f'  <p>{cn_summary}</p>',
+            '  <div class="news-source">',
+            f'    <span class="source-tag">{event_label}</span>',
+            f'    <a href="{source_url}" target="_blank" rel="noopener">{source_name} →</a>',
+            f'    {tags_text}',
             '  </div>',
-            '',
-            f'  <h2 class="news-title"><a href="{source_url}" target="_blank" rel="noopener">{cn_title}</a></h2>',
-            '',
-            f'  <p class="news-summary">{cn_summary}</p>',
-            '',
-            '  <div class="news-footer">',
-            f'    <a href="{source_url}" target="_blank" rel="noopener" class="source-link">{source_name}</a>',
-            f'    {tags_html}',
-            '  </div>',
-            '',
-            '</article>',
+            '</div>',
             '',
         ]
         
