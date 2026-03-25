@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T09:48:54.565627",
+  "generated_at": "2026-03-25T09:57:52.311220",
   "items": [
     {
       "title": "Helping developers build safer AI experiences for teens",
@@ -19,8 +19,8 @@
       ],
       "related_urls": [],
       "event_type": "产品发布",
-      "cn_title": "OpenAI：Helping developers build safer AI",
-      "cn_summary": "OpenAI发布重要更新，点击查看详情了解完整信息。"
+      "cn_title": "OpenAI助开发者打造更安全的青少年AI体验",
+      "cn_summary": "OpenAI推出了基于提示的青少年安全策略，以gpt-oss-safeguard辅助开发者，有助于调节AI系统中与年龄相关的特定风险。"
     },
     {
       "title": "Powering product discovery in ChatGPT",
@@ -40,8 +40,8 @@
       ],
       "related_urls": [],
       "event_type": "行业新闻",
-      "cn_title": "ChatGPT携手Agentic Commerce协议升级购物体验",
-      "cn_summary": "ChatGPT通过引入Agentic Commerce协议，实现更丰富的视觉沉浸式购物体验，支持产品发现、并行比较和商家集成。"
+      "cn_title": "ChatGPT升级 打造视觉沉浸式购物体验",
+      "cn_summary": "ChatGPT通过Agentic Commerce协议引入更丰富的视觉购物体验，支持产品发现、直观比较和商家集成功能。"
     },
     {
       "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
@@ -61,8 +61,8 @@
       ],
       "related_urls": [],
       "event_type": "开源发布",
-      "cn_title": "构建AI辅助的GitHub问题分类系统",
-      "cn_summary": "本教程教你如何在React Native应用中集成Copilot SDK，以生成AI驱动的问题摘要，并提供优雅降级和缓存的生产级模式。"
+      "cn_title": "利用Copilot SDK打造AI辅助的GitHub问题分类",
+      "cn_summary": "了解如何将Copilot SDK集成到React Native应用中，以生成AI驱动的问题摘要，并采用优雅的降级和缓存方案。GitHub Blog首发。"
     },
     {
       "title": "Update on the OpenAI Foundation",
@@ -81,8 +81,8 @@
       ],
       "related_urls": [],
       "event_type": "重大更新",
-      "cn_title": "OpenAI基金会将投10亿美元推进四大领域发展",
-      "cn_summary": "OpenAI基金会宣布，将至少投资10亿美元于疾病治疗、经济机会、人工智能韧性提升和社区项目，以推动相关领域发展。"
+      "cn_title": "OpenAI基金会拟投10亿美元支持四大领域",
+      "cn_summary": "OpenAI基金会宣布，将至少投资10亿美元于疾病治疗、经济机会、人工智能韧性和社区项目，以推动相关领域进步。"
     },
     {
       "title": "Google TV’s new Gemini features keep fans updated on sports teams and more",
@@ -101,8 +101,8 @@
       ],
       "related_urls": [],
       "event_type": "重大更新",
-      "cn_title": "Google：Google TV’s new Gemini features",
-      "cn_summary": "Google发布重要更新，点击查看详情了解完整信息。"
+      "cn_title": "谷歌电视更新Gemini功能 体育队况快速掌握",
+      "cn_summary": "谷歌电视即将推出三项Gemini功能，包括视觉响应、深度剖析和体育简讯，让球迷和用户能够及时了解体育队伍、娱乐和其他信息。"
     },
     {
       "title": "With $3.5B in fresh capital, Kleiner Perkins is going all in on AI",
@@ -119,8 +119,8 @@
       "tags": [],
       "related_urls": [],
       "event_type": "行业新闻",
-      "cn_title": "Kleiner Perkins豪掷35亿美元布局人工智能",
-      "cn_summary": "Kleiner Perkins新筹集的资本中，有10亿美元用于投资早期初创企业，另有25亿美元用于支持成熟企业后期增长。"
+      "cn_title": "Kleiner Perkins斥资35亿 全力押注人工智能",
+      "cn_summary": "Kleiner Perkins募集的新资本中，10亿美元用于投资初创企业，另25亿美元投入成熟阶段增长型企业。"
     },
     {
       "title": "OpenAI adds open source tools to help developers build for teen safety",
@@ -140,8 +140,8 @@
       ],
       "related_urls": [],
       "event_type": "开源发布",
-      "cn_title": "OpenAI：OpenAI adds open source tools",
-      "cn_summary": "OpenAI发布重要更新，点击查看详情了解完整信息。"
+      "cn_title": "OpenAI推出开源工具助力青少年网络安全",
+      "cn_summary": "开发者不再需要从头开始研究如何使AI更安全地服务于青少年，而是可以直接利用OpenAI提供的策略来增强他们所构建的产品。"
     },
     {
       "title": "Anthropic hands Claude Code more control, but keeps it on a leash",
@@ -160,8 +160,8 @@
       ],
       "related_urls": [],
       "event_type": "行业新闻",
-      "cn_title": "Anthropic：Anthropic hands Claude Code more",
-      "cn_summary": "Anthropic发布重要更新，点击查看详情了解完整信息。"
+      "cn_title": "Anthropic赋予Claude Code更多自主权",
+      "cn_summary": "Anthropic为Claude Code新增自动模式，简化AI执行任务审批流程，展现向更自主工具转变的趋势，同时内置安全措施确保平衡速度与安全性。"
     },
     {
       "title": "OpenAI’s plans to make ChatGPT more like Amazon aren’t going so well",
@@ -180,8 +180,8 @@
       ],
       "related_urls": [],
       "event_type": "行业新闻",
-      "cn_title": "OpenAI：OpenAI’s plans to make ChatGPT",
-      "cn_summary": "OpenAI发布重要更新，点击查看详情了解完整信息。"
+      "cn_title": "OpenAI旗下ChatGPT对电商功能调整",
+      "cn_summary": "OpenAI宣布将不再支持通过ChatGPT界面直接购买商品的即时结账服务，进一步明确其AI发展方向。"
     },
     {
       "title": "GitHub expands application security coverage with AI‑powered detections",
@@ -200,8 +200,8 @@
       ],
       "related_urls": [],
       "event_type": "开源发布",
-      "cn_title": "GitHub增强AI检测，拓展应用安全覆盖",
-      "cn_summary": "GitHub Code Security利用CodeQL和AI技术识别多种语言和框架中的漏洞，提升应用安全检测能力。"
+      "cn_title": "GitHub通过AI增强安全防护覆盖范围",
+      "cn_summary": "GitHub Code Security采用CodeQL和AI检测技术，识别更多语言和框架中的漏洞，扩大应用安全覆盖面。"
     }
   ]
 }
