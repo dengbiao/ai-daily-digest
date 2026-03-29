@@ -70,5 +70,37 @@
   "Inside our approach to the Model Spec|Learn how OpenAI’s Model Spec serves as a public framework for model behavior, b": {
     "title": "揭秘OpenAI模型规范的设计哲学",
     "summary": "OpenAI的模型规范是一个公开的框架，用于指导模型行为，随着人工智能系统的演进，它平衡了安全性、用户自由度和可问责性。"
+  },
+  "Why SoftBank’s new $40B loan points to a 2026 OpenAI IPO|Wall Street giants JPMorgan and Goldman Sachs are extending a 12-month, unsecure": {
+    "title": "软银获资有望助推OpenAI 2026年上市",
+    "summary": "华尔街巨头摩根大通和高盛向日本软银集团提供了一笔为期12个月的无担保贷款，总额高达400亿美元，这可能为2026年OpenAI的首次公开募股（IPO）铺平道路。"
+  },
+  "Memory chip giant SK hynix could help end ‘RAMmageddon’ with blockbuster US IPO|SK hynix’s potential U.S. listing could raise $10-$14 billion to help it build m": {
+    "title": "SK海力士拟美国上市，或缓解内存危机",
+    "summary": "内存芯片巨头SK海力士可能在美国上市，募集资金10亿至14亿美元，有望提高产能，激励同类企业跟进，从而缓解当前的内存短缺问题。"
+  },
+  "STADLER reshapes knowledge work at a 230-year-old company|Learn how STADLER uses ChatGPT to transform knowledge work, saving time and acce": {
+    "title": "STADLER利用ChatGPT革新230年老厂知识工作",
+    "summary": "STADLER采用ChatGPT技术优化知识工作流程，为650名员工节省时间，提升效率。"
+  },
+  "Anthropic’s Claude popularity with paying consumers is skyrocketing|Estimates for total Claude consumer users are all over the map (we've seen figur": {
+    "title": "Anthropic的Claude付费用户量激增",
+    "summary": "针对Anthropic的Claude，估计其付费用户规模不一，从1800万到3000万不等。尽管官方并未公布具体数据，但一位发言人向TechCrunch透露，今年其付费订阅用户数已超过翻倍。"
+  },
+  "Bluesky leans into AI with Attie, an app for building custom feeds|Bluesky’s new app Attie uses AI to help people build custom feeds the open socia": {
+    "title": "Bluesky推出AI应用Attie定制社交信息流",
+    "summary": "Bluesky新应用Attie利用人工智能技术，帮助用户在开放式社交网络协议上构建个性化信息流。"
+  },
+  "Elon Musk’s last co-founder reportedly leaves xAI|All but two of Musk's 11 xAI co-founders departed before this week.": {
+    "title": "马斯克合伙创立的xAI现仅剩两人",
+    "summary": "除去马斯克之外，xAI的11位联合创始人中，几乎全部已在本周前离职。"
+  },
+  "VCs are betting billions on AI’s next wave, so why is OpenAI killing Sora?|When an 82-year-old Kentucky woman was&#160;offered $26 million&#160;from an AI ": {
+    "title": "风投亿级下注AI浪潮 OpenAI为何堵死Sora？",
+    "summary": "一位82岁肯塔基州老妇拒绝了一家AI公司出价2600万美元在其土地上建设数据中心的提议。"
+  },
+  "OpenAI shuts down Sora while Meta gets shut out in court|When an 82-year-old Kentucky woman was&#160;offered $26 million&#160;from an AI ": {
+    "title": "OpenAI关闭Sora，Meta法庭连败诉",
+    "summary": "一位82岁肯塔基州女性拒绝了一家AI公司提供的2600万美元，该公司希望在其土地上建设数据中心。"
   }
 }
