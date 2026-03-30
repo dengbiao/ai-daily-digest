@@ -1,54 +1,75 @@
 {
-  "generated_at": "2026-03-29T10:06:11.665265",
+  "generated_at": "2026-03-31T07:08:51.097533",
   "items": [
     {
-      "title": "Why SoftBank’s new $40B loan points to a 2026 OpenAI IPO",
-      "summary": "Wall Street giants JPMorgan and Goldman Sachs are extending a 12-month, unsecured loan to the Japanese conglomerate.",
-      "importance": 9,
+      "title": "There are more AI health tools than ever—but how well do they work?",
+      "summary": "Earlier this month, Microsoft launched Copilot Health, a new space within its Copilot app where users will be able to connect their medical records and ask specific questions about their health.",
+      "importance": 10,
       "category": "📰 新闻资讯",
       "sources": [
         {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/27/why-softbanks-new-40b-loan-points-to-a-2026-openai-ipo/"
+          "name": "MIT Technology Review - AI",
+          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+          "item_url": "https://www.technologyreview.com/2026/03/30/1134795/there-are-more-ai-health-tools-than-ever-but-how-well-do-they-work/"
         }
       ],
       "tags": [
-        "OpenAI"
+        "Microsoft",
+        "产品发布"
       ],
       "related_urls": [],
-      "event_type": "公司动态",
-      "cn_title": "软银获资有望助推OpenAI 2026年上市",
-      "cn_summary": "华尔街巨头摩根大通和高盛向日本软银集团提供了一笔为期12个月的无担保贷款，总额高达400亿美元，这可能为2026年OpenAI的首次公开募股（IPO）铺平道路。"
+      "event_type": "产品发布",
+      "cn_title": "微软推出健康助手Copilot Health",
+      "cn_summary": "微软早前在其Copilot应用内推出新功能Copilot Health，用户在此可以连接医疗记录，并就健康问题提出具体查询。"
     },
     {
-      "title": "Memory chip giant SK hynix could help end ‘RAMmageddon’ with blockbuster US IPO",
-      "summary": "SK hynix’s potential U.S. listing could raise $10-$14 billion to help it build more capacity, encourage others to follow, and end the 'RAMmageddon' memory shortage.",
-      "importance": 9,
+      "title": "AI chip startup Rebellions raises $400 million at $2.3B valuation in pre-IPO round",
+      "summary": "The startup, which is planning to go public later this year, designs chips specifically for AI inference, another challenger to Nvidia's dominance.",
+      "importance": 10,
       "category": "📰 新闻资讯",
       "sources": [
         {
           "name": "TechCrunch - AI",
           "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/27/memory-chip-giant-sk-hynix-could-help-end-rammageddon-with-blockbuster-us-ipo/"
+          "item_url": "https://techcrunch.com/2026/03/30/ai-chip-startup-rebellions-raises-400-million-at-2-3b-valuation-in-pre-ipo-round/"
         }
       ],
       "tags": [],
       "related_urls": [],
       "event_type": "公司动态",
-      "cn_title": "SK海力士拟美国上市，或缓解内存危机",
-      "cn_summary": "内存芯片巨头SK海力士可能在美国上市，募集资金10亿至14亿美元，有望提高产能，激励同类企业跟进，从而缓解当前的内存短缺问题。"
+      "cn_title": "AI芯片初创Rebellions融资4亿美元 估值达23亿",
+      "cn_summary": "计划今年上市的Rebellions，设计专用于AI推理的芯片，将成为Nvidia的又一竞争对手。"
     },
     {
-      "title": "STADLER reshapes knowledge work at a 230-year-old company",
-      "summary": "Learn how STADLER uses ChatGPT to transform knowledge work, saving time and accelerating productivity across 650 employees.",
+      "title": "GitHub for Beginners: Getting started with GitHub security",
+      "summary": "Learn how to secure your projects and keep them safe with GitHub Advanced Security.\nThe post GitHub for Beginners: Getting started with GitHub security appeared first on The GitHub Blog.",
       "importance": 8,
-      "category": "🔥 行业动态",
+      "category": "🛠️ 工具资源",
       "sources": [
         {
-          "name": "OpenAI 官方博客",
-          "url": "https://openai.com/news",
-          "item_url": "https://openai.com/index/stadler"
+          "name": "GitHub 博客",
+          "url": "https://github.blog/",
+          "item_url": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security/"
+        }
+      ],
+      "tags": [
+        "开源"
+      ],
+      "related_urls": [],
+      "event_type": "开源发布",
+      "cn_title": "新手入门GitHub安全功能",
+      "cn_summary": "掌握如何利用GitHub高级安全功能保护你的项目不被恶意攻击。该教程首先发表在GitHub官方博客上。"
+    },
+    {
+      "title": "Why OpenAI really shut down Sora",
+      "summary": "OpenAI's decision last week to shut down Sora, its AI video-generation tool, just six months after releasing it to the public, raised immediate suspicions. The app had invited users to upload their own faces — so was this some kind of elaborate data grab?",
+      "importance": 8,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/"
         }
       ],
       "tags": [
@@ -56,19 +77,111 @@
       ],
       "related_urls": [],
       "event_type": "行业新闻",
-      "cn_title": "STADLER利用ChatGPT革新230年老厂知识工作",
-      "cn_summary": "STADLER采用ChatGPT技术优化知识工作流程，为650名员工节省时间，提升效率。"
+      "cn_title": "OpenAI紧急下线其AI视频生成工具Sora",
+      "cn_summary": "OpenAI上周决定关闭Sora，引发外界猜测。该工具上线仅半年，允许用户上传人脸，难道是在收集数据？"
     },
     {
-      "title": "Anthropic’s Claude popularity with paying consumers is skyrocketing",
-      "summary": "Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million). Anthropic hasn't disclosed this data, but a spokesperson did tell TechCrunch that Claude paid subscriptions have more than doubled this year.",
-      "importance": 8,
+      "title": "Popular AI gateway startup LiteLLM ditches controversial startup Delve",
+      "summary": "LiteLLM had obtained two security compliance certifications via Delve and fell victim to some horrific credential-stealing malware last week.",
+      "importance": 7,
       "category": "📰 新闻资讯",
       "sources": [
         {
           "name": "TechCrunch - AI",
           "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/"
+          "item_url": "https://techcrunch.com/2026/03/30/popular-ai-gateway-startup-litellm-ditches-controversial-startup-delve/"
+        }
+      ],
+      "tags": [],
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "LiteLLM弃用引发争议的Delve",
+      "cn_summary": "LiteLLM通过Delve获得两项安全合规认证，上周却惨遭恶意软件偷取凭证。"
+    },
+    {
+      "title": "15% of Americans say they’d be willing to work for an AI boss",
+      "summary": "Your human manager may soon be a chatbot. Across organizations, AI is being used to replace layers of management in what some are calling \"The Great Flattening.\"",
+      "importance": 7,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/30/ai-boss-supervisor-us-quinnipiac-poll/"
+        }
+      ],
+      "tags": [],
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "超过15%美国人愿意为AI老板打工",
+      "cn_summary": "未来，你的人工经理可能变成聊天机器人。各组织开始用AI取代管理层，这种现象被称为“大扁平化”。"
+    },
+    {
+      "title": "As more Americans adopt AI tools, fewer say they can trust the results",
+      "summary": "AI adoption is rising in the U.S., but trust remains low, with most Americans concerned about transparency, regulation, and the technology’s broader societal impact, according to a new Quinnipiac poll.",
+      "importance": 7,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/30/ai-trust-adoption-poll-more-americans-adopt-tools-fewer-say-they-can-trust-the-results/"
+        }
+      ],
+      "tags": [],
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "美民众对AI工具信任度走低",
+      "cn_summary": "尽管美国AI工具使用率上升，但根据昆尼皮亚克大学的最新民调，多数美国人对AI的信任度不高，主要担忧透明度、监管以及技术对社会的广泛影响。"
+    },
+    {
+      "title": "ScaleOps raises $130M to improve computing efficiency amid AI demand",
+      "summary": "ScaleOps just raised $130M to tackle GPU shortages and soaring AI cloud costs by automating infrastructure in real time.",
+      "importance": 7,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "TechCrunch - AI",
+          "url": "https://techcrunch.com/category/artificial-intelligence/",
+          "item_url": "https://techcrunch.com/2026/03/30/scaleops-130m-series-c-kubernetes-efficiency-ai-demand-funding/"
+        }
+      ],
+      "tags": [],
+      "related_urls": [],
+      "event_type": "重大更新",
+      "cn_title": "ScaleOps融资1.3亿美元提升AI算力",
+      "cn_summary": "为应对GPU短缺和AI云服务成本激增，ScaleOps近期完成了1.3亿美元的融资，旨在通过实时自动化基础设施提升计算效率。"
+    },
+    {
+      "title": "Helping disaster response teams turn AI into action across Asia",
+      "summary": "AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation",
+      "importance": 6,
+      "category": "🔥 行业动态",
+      "sources": [
+        {
+          "name": "OpenAI 官方博客",
+          "url": "https://openai.com/news",
+          "item_url": "https://openai.com/index/helping-disaster-response-teams-asia"
+        }
+      ],
+      "tags": [
+        "OpenAI"
+      ],
+      "related_urls": [],
+      "event_type": "行业新闻",
+      "cn_title": "亚洲灾害响应团队利用AI加速救援",
+      "cn_summary": "亚洲灾害响应行动中引入AI技术，通过与盖茨基金会合作的OpenAI研讨会探讨如何将智能技术应用于紧急救援行动，提升亚洲地区灾害响应速度和效率。"
+    },
+    {
+      "title": "The Pentagon’s culture war tactic against Anthropic has backfired",
+      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here.",
+      "importance": 6,
+      "category": "📰 新闻资讯",
+      "sources": [
+        {
+          "name": "MIT Technology Review - AI",
+          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+          "item_url": "https://www.technologyreview.com/2026/03/30/1134881/the-pentagons-culture-war-tactic-against-anthropic-has-backfired/"
         }
       ],
       "tags": [
@@ -76,85 +189,8 @@
       ],
       "related_urls": [],
       "event_type": "行业新闻",
-      "cn_title": "Anthropic的Claude付费用户量激增",
-      "cn_summary": "针对Anthropic的Claude，估计其付费用户规模不一，从1800万到3000万不等。尽管官方并未公布具体数据，但一位发言人向TechCrunch透露，今年其付费订阅用户数已超过翻倍。"
-    },
-    {
-      "title": "Bluesky leans into AI with Attie, an app for building custom feeds",
-      "summary": "Bluesky’s new app Attie uses AI to help people build custom feeds the open social networking protocol atproto.",
-      "importance": 7,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/28/bluesky-leans-into-ai-with-attie-an-app-for-building-custom-feeds/"
-        }
-      ],
-      "tags": [],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "Bluesky推出AI应用Attie定制社交信息流",
-      "cn_summary": "Bluesky新应用Attie利用人工智能技术，帮助用户在开放式社交网络协议上构建个性化信息流。"
-    },
-    {
-      "title": "Elon Musk’s last co-founder reportedly leaves xAI",
-      "summary": "All but two of Musk's 11 xAI co-founders departed before this week.",
-      "importance": 6,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/2026/03/28/elon-musks-last-co-founder-reportedly-leaves-xai/"
-        }
-      ],
-      "tags": [],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "马斯克合伙创立的xAI现仅剩两人",
-      "cn_summary": "除去马斯克之外，xAI的11位联合创始人中，几乎全部已在本周前离职。"
-    },
-    {
-      "title": "VCs are betting billions on AI’s next wave, so why is OpenAI killing Sora?",
-      "summary": "When an 82-year-old Kentucky woman was&#160;offered $26 million&#160;from an AI company that wanted to build a data center on her land, she said no.",
-      "importance": 6,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/podcast/vcs-are-betting-billions-on-ais-next-wave-so-why-is-openai-killing-sora/"
-        }
-      ],
-      "tags": [
-        "OpenAI"
-      ],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "风投亿级下注AI浪潮 OpenAI为何堵死Sora？",
-      "cn_summary": "一位82岁肯塔基州老妇拒绝了一家AI公司出价2600万美元在其土地上建设数据中心的提议。"
-    },
-    {
-      "title": "OpenAI shuts down Sora while Meta gets shut out in court",
-      "summary": "When an 82-year-old Kentucky woman was&#160;offered $26 million&#160;from an AI company that wanted to build a data center on her land, she said no.",
-      "importance": 6,
-      "category": "📰 新闻资讯",
-      "sources": [
-        {
-          "name": "TechCrunch - AI",
-          "url": "https://techcrunch.com/category/artificial-intelligence/",
-          "item_url": "https://techcrunch.com/video/openai-shuts-down-sora-while-meta-gets-shut-out-in-court/"
-        }
-      ],
-      "tags": [
-        "OpenAI",
-        "Meta"
-      ],
-      "related_urls": [],
-      "event_type": "行业新闻",
-      "cn_title": "OpenAI关闭Sora，Meta法庭连败诉",
-      "cn_summary": "一位82岁肯塔基州女性拒绝了一家AI公司提供的2600万美元，该公司希望在其土地上建设数据中心。"
+      "cn_title": "五角大楼对Anthropic的文化战策略适得其反",
+      "cn_summary": "本周《算法》时事通讯中报道了五角大楼针对Anthropic的文化战策略，其负面效应不容小觑，欲知详情，可订阅关注。"
     }
   ]
 }
